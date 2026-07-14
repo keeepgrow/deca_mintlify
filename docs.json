@@ -1,0 +1,210 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "DecaGEO",
+  "colors": {
+    "primary": "#4B1AFF",
+    "light": "#9376ff",
+    "dark": "#b7a3ff"
+  },
+  "favicon": {
+    "light": "/images/favicon.png",
+    "dark": "/images/favicon.png"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Blog",
+        "groups": [
+          {
+            "group": "What Changed This Week",
+            "pages": [],
+            "icon": "line-chart"
+          },
+          {
+            "group": "Comparisons",
+            "icon": "trophy-star",
+            "pages": [
+              "best-tools/semrush-vs-brightedge"
+            ]
+          },
+          {
+            "group": "What's Working Now",
+            "icon": "calendar-week",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Docs",
+        "pages": [
+          {
+            "group": "Get Started",
+            "icon": "add",
+            "pages": [],
+            "hidden": true
+          },
+          {
+            "group": "Open rankings ",
+            "icon": "ranking-star",
+            "pages": []
+          },
+          {
+            "group": "Brand insights",
+            "icon": "key",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "GEO Playbooks",
+            "icon": "notebook",
+            "pages": [
+              {
+                "group": "GEO practice",
+                "icon": "sparkle",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Fundamentals",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Advanced Tactics",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "group": "What's New",
+            "icon": "stars",
+            "pages": []
+          },
+          {
+            "group": "Support Hub",
+            "icon": "circle-question",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Archive",
+        "hidden": true,
+        "pages": [
+          {
+            "group": "DECA x ChatGPT Synergy",
+            "hidden": true,
+            "pages": [
+              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/context-engineering-vs-prompt-engineering",
+              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/perfect-ai-content-engine",
+              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/generic-trap-geo-strategy",
+              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/social-repurposing-engine"
+            ]
+          },
+          {
+            "group": "DECA Sneak Peek",
+            "icon": "eyes",
+            "hidden": true,
+            "pages": [
+              {
+                "group": "Building DECA",
+                "pages": []
+              },
+              {
+                "group": "Team Stories",
+                "pages": []
+              },
+              {
+                "group": "Behind the Scenes",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "group": "DECA Handbook",
+            "icon": "notebook",
+            "hidden": true,
+            "pages": [
+              {
+                "group": "Getting Started",
+                "hidden": true,
+                "pages": []
+              },
+              {
+                "group": "Core Features",
+                "hidden": true,
+                "pages": []
+              },
+              {
+                "group": "Best Practices",
+                "hidden": true,
+                "pages": []
+              },
+              {
+                "group": "Account & Settings",
+                "hidden": true,
+                "pages": []
+              },
+              {
+                "group": "FAQ",
+                "hidden": true,
+                "pages": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/deca_logo_light_mode.png",
+    "dark": "/images/deca_logo_dark_mode.png",
+    "href": "https://decageo.ai"
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "https://decageo.ai/login",
+        "label": "Sign In"
+      },
+      {
+        "label": "Start GEO with DECA",
+        "href": "https://decageo.ai/"
+      }
+    ]
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "footer": {
+    "socials": {
+      "website": "https://decageo.ai",
+      "linkedin": "https://www.linkedin.com/company/decageo"
+    }
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-7BJN7MYTTP"
+    }
+  },
+  "errors": {
+    "404": {
+      "redirect": true
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "toc"
+  },
+  "markdown": {
+    "schema": true
+  },
+  "interaction": {
+    "drilldown": false
+  }
+}
