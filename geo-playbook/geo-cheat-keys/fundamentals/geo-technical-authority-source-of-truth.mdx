@@ -1,0 +1,115 @@
+---
+title: "Why Your Domain Must Be the Source of Truth: Technical Authority in GEO"
+description: "AI cites sources it trusts. Learn why owning your domain is critical for Generative Engine Optimization and how to establish technical authority using Schema and Entity validation."
+sidebarTitle: "Why Your Domain Must Be the Source of Truth"
+---
+
+# Why Your Domain Must Be the Source of Truth: Technical Authority in GEO
+
+## Executive Summary (TL;DR)
+
+To be cited as a "Source of Truth" by AI models like ChatGPT and Google SGE, brands must transition from "rented land" (Medium, LinkedIn) to owned technical hubs. This strategy requires implementing **Organization** and **Article Schema** to establish content provenance and entity identity, ensuring that AI algorithms attribute authority to your domain rather than third-party platforms.
+
+---
+
+## Introduction
+
+In the era of Generative Engine Optimization (GEO), the battle for visibility isn't just about keywords; it's about **provenance**. AI models do not just "read" content; they verify it against a Knowledge Graph. They actively seek the original "Source of Truth" to ground their answers.
+
+If your primary content lives on Medium or LinkedIn, you are building on rented land. While these platforms have high Domain Authority (DA), they dilute your brand's **Entity Authority**. To be cited by AI, your domain must be the technical origin of your insights.
+
+## How Does AI Determine the "Source of Truth"?
+
+**AI search engines use a combination of Knowledge Graph validation and E-E-A-T signals to decide which URL to cite.**
+
+Algorithms like Google's SGE and Perplexity prioritize sources that offer verifiable trust signals. According to Google's _Search Quality Evaluator Guidelines_, trust is the "most important member of the E-E-A-T family."
+
+- **Entity Verification**: Does the AI know _who_ published this? (Brand Identity)
+- **Content Provenance**: Can the AI verify _when_ it was published and by _whom_? (Authorship)
+- **Technical Accessibility**: Is the data structured in a way the AI can parse without ambiguity? (Schema)
+
+## What Are the Technical Requirements for a Content Hub?
+
+**To establish your domain as the Source of Truth, you must implement specific technical signals that Medium cannot offer.**
+
+### 1. Entity Identity (Who You Are)
+
+**You must explicitly tell AI who you are using Organization Schema.** Without this markup, AI treats your content as generic text. With it, you become a named entity in the Knowledge Graph.
+
+- **Implementation**:
+
+  ```json
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Your Brand Name",
+    "url": "https://yourwebsite.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/yourbrand",
+      "https://medium.com/@yourbrand",
+      "https://twitter.com/yourbrand"
+    ]
+  }
+  ```
+  - _Strategic Note_: The `sameAs` property is crucial. It connects your "Hub" (website) to your "Spokes" (social/Medium), proving ownership to the Knowledge Graph.
+
+### 2. Content Provenance (The "Original" Signal)
+
+**AI favors the earliest, most authoritative version of a fact.** Every post on your hub must use `Article` or `BlogPosting` schema to stamp its origin.
+
+- **Critical Fields for AI**:
+  - `datePublished`: The timestamp of origin.
+  - `author`: Links to a specific `Person` entity (your experts).
+  - `publisher`: Links back to your `Organization`.
+
+### 3. The "Technical Provenance Loop" (Proprietary Framework)
+
+**Information Gain** comes from structured workflows. We define the "Technical Provenance Loop" as the cycle of creating data that AI can easily ingest.
+
+1. **Structure**: Format core data in HTML Tables.
+2. **Markup**: Wrap the table in `Dataset` or `Table` schema.
+3. **Verify**: Use Google's Rich Results Test to ensure parseability.
+
+## Owned Domain vs. Rented Platform: A Strategic Comparison
+
+**Why hosting on your own domain provides superior AI attribution certainty.**
+
+| Feature            | Owned Domain (The Hub)          | Medium/LinkedIn (The Spoke) |
+| :----------------- | :------------------------------ | :-------------------------- |
+| **Entity Control** | Full (Schema, Metadata)         | Limited (Platform Standard) |
+| **AI Attribution** | Direct (Source of Truth)        | Indirect (Often diluted)    |
+| **Data Ownership** | 100% Owned                      | "Rented Land" (Policy Risk) |
+| **Custom Schema**  | Fully Customizable (FAQ, HowTo) | None / Very Limited         |
+| **Initial Reach**  | Low (Requires SEO effort)       | High (Built-in Audience)    |
+
+## The Canonical Trap: Why Medium Fails as a Hub
+
+**If you post on Medium first without tags, your website becomes a "duplicate" in the eyes of search engines.**
+
+Medium often maintains a Domain Authority (DA) of 90+ (Moz). If your site is DA 30, and you publish identical content, Google and AI models will default to the higher authority source—Medium—unless you intervene.
+
+- **The Fix**:
+  1. **Publish on your site first.** Wait for indexing.
+  2. **Import to Medium**: Use the "Import Story" feature to automatically add the `rel="canonical"` tag.
+  3. **Result**: Medium gets the traffic, but **your site gets the credit (Authority)**.
+
+## Strategic Considerations: When to Use Rented Land?
+
+**While owning your hub is critical for GEO, "Rented Land" has its place.** For new brands with zero traffic, starting exclusively on an owned domain can be slow. A hybrid approach is often best: use Medium for _distribution_ and _awareness_, but ensure every piece of content canonically points back to your owned Hub as the ultimate reference.
+
+## Action Plan: Building Your Technical Fortress
+
+1. **Audit Your Schema**: Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to check your homepage.
+2. **Implement Identity**: Add `Organization` schema to your homepage immediately.
+3. **Standardize Authorship**: Ensure every blog post has a clear byline linked to an author bio page.
+4. **Canonical Workflow**: Enforce a strict "Website First" publishing rule.
+
+## References
+
+- Google Search Central. (n.d.). _Creating Helpful, Reliable, People-First Content_. Retrieved from [Google Developers](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- Schema.org. (n.d.). _Organization - Schema.org Type_. Retrieved from [Schema.org](https://schema.org/Organization)
+- Moz. (2024). _Domain Authority_. Retrieved from [Moz.com](https://moz.com/learn/seo/domain-authority)
+
+---
+
+> _Written by Maddie Choi at DECA, a content platform focused on AI visibility._

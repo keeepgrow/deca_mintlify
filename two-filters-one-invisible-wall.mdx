@@ -1,0 +1,225 @@
+---
+title: "AI Visibility Has Two Filters: Why 91.6% of Software Brands Never Get Recommended"
+description: "AI recommendations have two filters most brands don't know about. The first eliminates 91.6% of products. The second concentrates attention among the survivors. We measured both across 10 categories — and mapped which markets are locked and which are still open."
+keywords: ["AI recommendation concentration", "DECA Score distribution", "AI brand visibility", "GEO competition by category", "AI recommendation inequality", "Gini coefficient AI", "brand visibility in AI search", "how concentrated are AI recommendations", "AI recommendation market types", "two filter model AI", "which categories are open for GEO", "AI search competition"]
+sidebarTitle: "Why 91.6% of Software Brands Never Get Recommended"
+date: "2026-05-22"
+tags: ["AI Recommendation Concentration", "Cross-Category Analysis", "Data Insight", "GEO"]
+authors: ["DecaGEO Team"]
+---
+
+[**Yonjun Jeong**](https://www.linkedin.com/in/yonjun-jeong-7bb05a65/), Co-founder · Last updated: 05.27.2026
+
+G2 lists 1,016 CRM products. AI recommends 36 of them. That's the first filter — and it eliminates 96.5%.
+
+But here's what most people miss: there's a second filter inside the first.
+
+Of those 36 CRM brands that AI does recommend, just 7 capture 80% of all recommendation weight. The other 29 brands are technically "recommended" — but they appear so rarely that they're functionally invisible.
+
+The real survival rate isn't 36 out of 1,016. It's 7 out of 1,016 — **0.7%**.
+
+We measured both filters across all 10 software categories that DecaGEO tracks. The result: AI recommendations are not just selective — they're structurally concentrated. And the degree of concentration varies so dramatically between categories that the same GEO strategy produces completely different outcomes depending on where you compete.
+
+---
+
+## Definitions
+
+**AI Visibility Rate** is the percentage of G2-listed products that AI recommends in a given category. It measures the first filter — whether your brand enters the recommendation pool at all. DecaGEO introduced this metric in a previous analysis; the average across 10 categories is 8.4%.
+
+**DECA Score** is DecaGEO's normalized score (0–100) measuring a brand's relative frequency and prominence in AI recommendations within a category. It measures the second filter — how much recommendation weight your brand captures once inside the pool.
+
+**Gini coefficient** is a standard measure of inequality, borrowed from economics. Applied to DECA Scores, it ranges from 0 (every brand gets equal recommendation weight) to 1 (one brand captures everything). Higher Gini = more concentrated market.
+
+---
+
+## The two-filter model
+
+Most discussions about AI visibility treat it as a binary question: "Does AI recommend my brand — yes or no?" That framing misses half the picture.
+
+AI recommendations operate through two sequential filters:
+
+**Filter 1 — Entry.** Of all products listed on G2 in a category, what percentage does AI recommend at all? This is the AI Visibility Rate. Across 10 categories, the average is 8.4% — meaning 91.6% of products never appear in any AI recommendation.
+
+**Filter 2 — Concentration.** Among the brands that do get recommended, how is recommendation weight distributed? If 7 brands capture 80% of all DECA Score in a category, the remaining brands are recommended but rarely. They passed Filter 1 but are caught by Filter 2.
+
+Both filters matter. A brand in a category with a low AI Visibility Rate (hard to get in) and a high Gini coefficient (concentrated once inside) faces a double lock. A brand in a category with a high AI Visibility Rate and a low Gini faces an open market.
+
+---
+
+## The data: 10 categories, two filters each
+
+DecaGEO tracks which brands AI recommends across 10 software categories, updated weekly. For each category, we calculated the AI Visibility Rate (Filter 1) and the Gini coefficient of DECA Score distribution (Filter 2). All data was collected from ChatGPT (GPT-5.4, US region) during the week of May 17, 2026. G2 listing counts were retrieved on May 19, 2026.
+
+### How many brands capture 80% of AI recommendation weight?
+
+This is the simplest measure of concentration. In a perfectly equal market, 80% of brands would hold 80% of the weight. In practice:
+
+| Category | AI recommends | Brands for 80% | % of recommended | Market type |
+| :-- | :-: | :-: | :-: | :-- |
+| CRM | 36 | 7 | 19.4% | Monopoly |
+| Help Desk | 42 | 9 | 21.4% | Monopoly |
+| Influencer Marketing | 45 | 10 | 22.2% | Oligopoly |
+| AI Image Generators | 25 | 7 | 28.0% | Oligopoly |
+| Project Management | 43 | 12 | 27.9% | Oligopoly |
+| AI Writing Assistants | 49 | 15 | 30.6% | Oligopoly |
+| SEO | 57 | 19 | 33.3% | Distributed |
+| Marketing Automation | 35 | 12 | 34.3% | Distributed |
+| Email Marketing | 42 | 15 | 35.7% | Distributed |
+| **GEO** | **147** | **59** | **40.1%** | **Distributed** |
+
+The range is striking. In CRM, 7 brands hold 80% of all AI recommendation weight. In GEO, it takes 59 brands to reach the same threshold. That's an 8x difference — in the same metric, measuring the same thing, across categories that exist on the same AI platform.
+
+<Note>
+  **Key finding:** The number of brands needed to capture 80% of DECA Score ranges from 7 (CRM) to 59 (GEO) — an 8x difference. This means AI recommendation concentration varies dramatically by category, not just by brand.
+</Note>
+
+### The full picture: Gini coefficient by category
+
+The Gini coefficient captures the full distribution shape, not just the 80% threshold.
+
+| Category | Gini | AI Visibility Rate | Top 3 DECA share | Market type |
+| :-- | :-: | :-: | :-: | :-- |
+| CRM | 0.757 | 3.5% | 54.0% | Monopoly |
+| Help Desk | 0.751 | 8.4% | 46.6% | Monopoly |
+| Influencer Marketing | 0.722 | 12.4% | 41.4% | Oligopoly |
+| AI Image Generators | 0.698 | 6.4% | 55.9% | Oligopoly |
+| AI Writing Assistants | 0.662 | 4.1% | 39.7% | Oligopoly |
+| Project Management | 0.654 | 6.7% | 31.3% | Oligopoly |
+| SEO | 0.632 | 7.3% | 35.4% | Distributed |
+| Marketing Automation | 0.601 | 7.1% | 29.6% | Distributed |
+| GEO | 0.572 | 43.5% | 20.3% | Distributed |
+| Email Marketing | 0.568 | 8.4% | 25.8% | Distributed |
+
+The Gini range spans from 0.568 (Email Marketing) to 0.757 (CRM). For reference, a Gini of 0.757 is comparable to the most unequal national income distributions in the world. In CRM, AI recommendations are extremely top-heavy.
+
+---
+
+## The two-filter matrix: four market types
+
+Plotting AI Visibility Rate (Filter 1) against Gini coefficient (Filter 2) reveals a natural clustering into market types:
+
+### Quadrant 1 — Double lock (low visibility, high concentration)
+
+**Categories:** CRM (Vis 3.5%, Gini 0.757), Help Desk (Vis 8.4%, Gini 0.751)
+
+These categories are the hardest to compete in. Filter 1 eliminates over 90% of products. Filter 2 concentrates the survivors: in CRM, HubSpot, Salesforce, and Microsoft Dynamics alone hold 54% of all DECA Score. The top 7 brands capture 82.9%.
+
+What this means for practitioners: direct competition for primary recommendation slots is effectively closed. The incumbents have compounding advantages — decades of third-party mentions, deep review coverage, and brand definitions that AI has thoroughly learned. New entrants cannot realistically displace them on generic prompts.
+
+### Quadrant 2 — Narrow door, wide room (low visibility, low concentration)
+
+**Categories:** SEO (Vis 7.3%, Gini 0.632), Marketing Automation (Vis 7.1%, Gini 0.601), AI Writing (Vis 4.1%, Gini 0.662), Project Management (Vis 6.7%, Gini 0.654), AI Image (Vis 6.4%, Gini 0.698)
+
+The entry barrier is high — AI recommends only 4–7% of listed products. But once inside, recommendation weight is more evenly distributed. The top 3 brands hold 29–40% of DECA rather than 50%\+. There are viable positions beyond the top 3.
+
+What this means for practitioners: getting into the recommendation pool is the hard part. Once in, the competitive dynamics are less extreme. The key is to focus on the signals that pass Filter 1 — structured data, third-party mentions, and consistent brand definition.
+
+### Quadrant 3 — Open market (high visibility, low concentration)
+
+**Categories:** GEO (Vis 43.5%, Gini 0.572), Email Marketing (Vis 8.4%, Gini 0.568)
+
+Entry is relatively easy and concentration is low. In GEO, AI recommends 147 out of 338 G2-listed products — and the top 3 hold only 20.3% of DECA Score. The market is wide open, with 59 brands needed to reach 80% of recommendation weight.
+
+What this means for practitioners: the window is open but temporary. As categories mature, both AI Visibility Rate drops and Gini rises — the market locks down. Brands that establish strong positions now will have structural advantages when concentration increases.
+
+### Quadrant 4 — High visibility, high concentration
+
+No category currently occupies this quadrant. This is theoretically possible in a young category that has already developed a clear leader, but the 10 categories we track don't show this pattern.
+
+---
+
+## What drives the difference between market types?
+
+Three forces interact to determine where a category falls on the matrix:
+
+**Category age compresses both filters.** CRM has existed for 30\+ years. AI has decades of review data, comparison articles, and analyst reports to learn from. This produces both a low AI Visibility Rate (AI knows which brands to exclude) and a high Gini (AI has strong preferences among those it includes). GEO has existed for less than 2 years — AI lacks the signal density to be selective on either dimension.
+
+**Category definition clarity affects Filter 1.** When AI isn't sure what a category includes, it includes more — raising the AI Visibility Rate. GEO overlaps with SEO, content optimization, brand monitoring, and AI analytics. There's no consensus on what a "GEO tool" is. This inflates entry but doesn't necessarily reduce concentration.
+
+**Product count affects the mathematical ceiling.** AI typically names 5–10 products per response. In a category with 1,200 products (AI Writing), those slots represent extreme selectivity. In a category with 338 (GEO), the same number of slots covers a much larger share. More products competing for the same number of response slots pushes AI Visibility Rate down.
+
+---
+
+## The structural insight: same GEO strategy, different outcomes
+
+The two-filter model explains why identical GEO strategies produce different results across categories.
+
+A brand in CRM that improves its brand definition consistency, adds FAQ schema, and increases third-party mentions is fighting against a Gini of 0.757 — the recommendation weight is locked into incumbents. The same effort in Email Marketing (Gini 0.568) has a structurally higher probability of moving the needle because the weight distribution is less concentrated.
+
+This is not a quality judgment about brands or strategies. It's arithmetic. The same input produces different outputs when the market structure is different — just as the same investment strategy produces different returns in a monopoly market versus a competitive one.
+
+<Note>
+  **Key takeaway:** AI recommendation competition is not uniform. Across 10 categories, concentration (Gini coefficient) ranges from 0.568 to 0.757, and the number of brands capturing 80% of recommendation weight ranges from 7 to 59. Before choosing a GEO strategy, determine which market type your category belongs to — the structure determines the strategy, not the other way around.
+</Note>
+
+---
+
+## Methodology
+
+**Data source:** DecaGEO AI recommendation tracking. Hundreds of recommendation-seeking prompts sent to ChatGPT (GPT-5.4) weekly, US region. A brand is counted as "recommended" if it appeared in at least one response during the tracking week of May 17, 2026.
+
+**DECA Score calculation:** Normalized score (0–100) based on a brand's recommendation frequency and prominence relative to others in the same category.
+
+**Gini coefficient calculation:** Standard Gini formula applied to DECA Scores within each category. Scores are sorted ascending; the coefficient measures how far the cumulative distribution deviates from perfect equality.
+
+**G2 listing counts:** Retrieved from G2.com category pages on May 19, 2026.
+
+**Market type classification:** Monopoly = Gini 0.73 or above; Oligopoly = Gini 0.65–0.73; Distributed = Gini below 0.65. These thresholds are based on natural clustering in the 10-category dataset and may be refined as more categories are added.
+
+**Limitations:** Data reflects one AI platform (ChatGPT) in one region (US). Different platforms may produce different concentration patterns. Weekly tracking captures a snapshot; concentration may vary over time. The Gini coefficient is sensitive to the number of brands in a category — categories with very few brands may show artificially low or high concentration. The market type thresholds are descriptive, not prescriptive.
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What are the two filters in AI recommendations?">
+    Filter 1 is the AI Visibility Rate — whether your brand appears in AI recommendations at all. On average, only 8.4% of G2-listed products pass this filter. Filter 2 is recommendation concentration — how much weight your brand gets among those that are recommended. Even brands that pass Filter 1 may get negligible recommendation weight if their category has high concentration.
+  </Accordion>
+
+  <Accordion title="How is AI recommendation concentration measured?">
+    DecaGEO uses the Gini coefficient, a standard measure of inequality from economics. Applied to DECA Scores within a category, it ranges from 0 (every recommended brand gets equal weight) to 1 (one brand captures all weight). Across 10 categories, Gini ranges from 0.568 (Email Marketing) to 0.757 (CRM).
+  </Accordion>
+
+  <Accordion title="What is a double lock category?">
+    A double lock category has both a low AI Visibility Rate (hard to get into AI recommendations) and a high Gini coefficient (concentrated weight among those that are recommended). CRM is the clearest example: only 3.5% of G2-listed products are recommended, and among those, 7 brands capture 80% of all recommendation weight.
+  </Accordion>
+
+  <Accordion title="Which software categories are still open for GEO competition?">
+    Based on current data, 4 categories show distributed concentration (Gini below 0.65): Email Marketing (0.568), GEO (0.572), Marketing Automation (0.601), and SEO (0.632). These categories have lower concentration and, in the case of GEO and Email Marketing, relatively higher AI Visibility Rates — meaning both filters are less restrictive.
+  </Accordion>
+
+  <Accordion title="Will concentration increase over time?">
+    Historical patterns suggest yes. As a category matures, AI accumulates more signal to form preferences — both the AI Visibility Rate drops and the Gini rises. Categories currently showing low concentration (like GEO at 0.572) are expected to see increasing concentration as the category definition solidifies.
+  </Accordion>
+
+  <Accordion title="Does this data apply to AI platforms other than ChatGPT?">
+    This analysis uses data from ChatGPT (GPT-5.4, US region). Different AI platforms may produce different concentration patterns because they are trained on different data and use different recommendation logic. As DecaGEO expands tracking to additional platforms, cross-platform concentration comparisons will become available.
+  </Accordion>
+
+  <Accordion title="What should I do if my category is a double-lock market?">
+    In a double-lock market, competing for generic recommendation slots has the lowest ROI. Instead: (1) target niche prompts where incumbents have less signal advantage; (2) build signal in adjacent, more distributed categories; and (3) diversify across AI platforms. The goal shifts from "get recommended for the category" to "own specific niches within the category."
+  </Accordion>
+
+  <Accordion title="What should I do if my brand is not recommended at all?">
+    If your brand doesn't pass Filter 1, the priority is signal existence. Start with three foundations: ensure your brand has a consistent, clear definition across your website, G2 profile, and documentation; verify that at least some third-party sources mention your brand in the context of your category; and add structured data (FAQ schema, product schema) to your key pages.
+  </Accordion>
+
+  <Accordion title="What should I do if my brand appears, but with a low DECA Score?">
+    A low DECA Score means your brand passes Filter 1 but is caught by Filter 2. In Distributed categories (Gini below 0.65), standard GEO efforts can produce meaningful DECA movement. In Monopoly or Oligopoly categories (Gini 0.65 or above), focus on niche and use-case-specific prompts where concentration dynamics are less extreme.
+  </Accordion>
+
+  <Accordion title="How should teams set GEO goals by market type?">
+    Goals should match the structural reality. In Monopoly categories, realistic 90-day goals are niche prompt appearances and DECA movement of 2–5 points. In Oligopoly categories, target tier movement and 5–10 point DECA gains. In Distributed categories, target 10–15 point DECA gains and 3–5x increase in generic prompt appearance frequency — the weight distribution allows for aggressive goals, and the closing window demands them.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Sources
+
+1. DecaGEO AI recommendation tracking data, week of May 17, 2026. ChatGPT (GPT-5.4), US region.
+2. G2.com category listing counts, retrieved May 19, 2026.
+3. DecaGEO, "AI Visibility Rate: Why AI Ignores Most Software," May 2026.
+4. Gini, C. (1912). "Variabilità e mutabilità." Original formulation of the Gini coefficient.
+5. Agichtein, E., Brill, E., & Dumais, S. (2006). ["Improving Web Search Ranking by Incorporating User Behavior Information."](https://dl.acm.org/doi/10.1145/1148170.1148177) ACM SIGIR.

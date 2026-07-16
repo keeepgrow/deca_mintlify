@@ -1,0 +1,108 @@
+---
+title: "Entity Optimization: The Foundation of GEO Strategy"
+description: "Move beyond keywords. Learn how Entity Optimization helps AI models recognize your brand as a distinct authority using the Knowledge Graph and JSON-LD."
+sidebarTitle: "GEO Entity Optimization"
+---
+
+# Entity Optimization: Teaching AI Who You Are
+
+**Last Updated:** January 2026
+
+## TL;DR: What is Entity Optimization?
+
+Entity Optimization is the strategic process of defining a brand as a distinct, factual object ("Entity") within an AI's Knowledge Graph, rather than just a collection of keywords. By establishing clear attributes—such as name, founder, and industry—brands can secure high-confidence citations in generative search results (Generative Engine Optimization).
+
+---
+
+## Why does AI ignore my content? (Strings vs. Things)
+
+In traditional SEO, marketers optimized for "strings" (keywords). In the era of Generative Engine Optimization (GEO), you must optimize for "things" (Entities).
+
+If an AI like ChatGPT or Gemini does not recognize your brand as a distinct entity with verified attributes, it treats your content as unstructured noise. While it may summarize your text, it will hesitate to cite you as an authority. According to [SevenSEO](https://sevenseo.io/services/saas-seo/), for a brand to be visible in AI snapshots, it "must be a well-understood entity within these graphs," not just a keyword match.
+
+### Comparison: SEO vs. GEO Entity Strategy
+
+| Feature          | Traditional SEO (Keywords)  | GEO (Entity Optimization) |
+| :--------------- | :-------------------------- | :------------------------ |
+| **Target**       | Search Term Frequency       | Knowledge Graph Nodes     |
+| **Goal**         | Ranking #1 on SERP          | Direct Citation in Answer |
+| **Mechanism**    | Backlinks & keyword density | Vector Space Proximity    |
+| **Verification** | Domain Authority (DA)       | Entity Confidence Score   |
+
+---
+
+## How do AI models verify facts?
+
+AI models utilize **Vector Space** and **Knowledge Graphs (KG)** to ground their responses and reduce hallucinations.
+
+- **Vector Space:** Measures semantic proximity (e.g., "Nike" is mathematically close to "Running Shoes").
+- **Knowledge Graph:** A structured database of facts. If your brand exists as a node in the KG, the AI assigns a high "confidence score" to facts about you.
+
+[NVIDIA Developers](https://developer.nvidia.com/blog/insights-techniques-and-evaluation-for-llm-driven-knowledge-graphs/) emphasize that integrating LLMs with knowledge graphs is "crucial for enhancing the accuracy, reasoning, and factual grounding of AI systems," specifically to address the weakness of hallucination.
+
+---
+
+## How do I optimize my Brand Entity? (The 3-Step Protocol)
+
+### 1. Identity Definition: How do I clarify my "Home Node"?
+
+Your website must serve as the single source of truth. Ambiguity leads to entity confusion.
+
+- **The "About Us" Page:** This is your primary entity definition document. It must clearly state your _Legal Name_, _Founded Date_, _Mission_, and _Key Personnel_.
+- **NAP Consistency:** Ensure your Name, Address, and Phone (NAP) are identical across all headers, footers, and external profiles.
+
+### 2. The Translator: How do I use Structured Data?
+
+You must speak the AI's native language: **JSON-LD**. Do not just mark up articles; you must mark up your **Organization** to establish identity.
+
+**Action:** Add the following `Organization` schema to your homepage `<head>` to explicitly tell search engines who you are.
+
+```json
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Brand Name",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/yourbrand",
+    "https://www.linkedin.com/company/yourbrand",
+    "https://en.wikipedia.org/wiki/Your_Brand"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-555-5555",
+    "contactType": "Customer Service"
+  }
+}
+</script>
+```
+
+### 3. Corroboration: How do I build "Edges" in the Graph?
+
+AI verifies your self-proclaimed identity by cross-referencing external sources.
+
+- **Third-Party Profiles:** Ensure consistent profiles on Crunchbase, LinkedIn, and Bloomberg.
+- **Wikidata:** [Search Engine Journal](https://www.searchenginejournal.com/structured-datas-role-in-ai-and-ai-search-visibility/553175/) notes that structured data feeds into knowledge graphs; having a Wikidata entry (even if not Wikipedia) significantly boosts entity confidence.
+
+---
+
+## What are the limitations of Entity Optimization?
+
+While powerful, this strategy has a "Knowledge Graph Lag." unlike the live web, Knowledge Graphs are not updated in real-time.
+
+- **Update Latency:** It may take weeks or months for a new entity to be fully assimilated into the core Knowledge Graph of a major LLM.
+- **Entity Collision:** If your brand name is generic (e.g., "Summit Consulting"), AI may struggle to distinguish you without strong disambiguation signals like unique location or specific industry focus.
+
+---
+
+## References
+
+- NVIDIA | Insights for LLM-driven Knowledge Graphs | [URL](https://developer.nvidia.com/blog/insights-techniques-and-evaluation-for-llm-driven-knowledge-graphs/)
+- Search Engine Journal | Structured Data's Role in AI Search | [URL](https://www.searchenginejournal.com/structured-datas-role-in-ai-and-ai-search-visibility/553175/)
+- SevenSEO | SaaS SEO & GEO Definition | [URL](https://sevenseo.io/services/saas-seo/)
+
+---
+
+> _Written by Maddie Choi at DECA, a content platform focused on AI visibility._

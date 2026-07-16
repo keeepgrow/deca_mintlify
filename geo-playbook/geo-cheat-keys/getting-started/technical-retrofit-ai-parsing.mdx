@@ -1,0 +1,115 @@
+---
+title: "The Technical Retrofit: How to Structure Legacy Content for AI Search"
+description: "Learn the 3-step technical retrofit process to make legacy content AI-readable. Master semantic HTML, summary boxes, and schema markup for GEO(Generative Engine Optimization)."
+sidebarTitle: "How to Structure Legacy Content for AI Search"
+---
+
+# The Technical Retrofit: Structuring Legacy Content for AI Parsing
+
+## Executive Summary
+
+**Technical Retrofitting** is the strategic process of updating legacy web content's HTML structure and data organization to maximize machine readability. Unlike traditional SEO, which focuses on keywords, retrofitting prioritizes **semantic clarity**—ensuring Generative Engines (GEs) can effortlessly parse, categorize, and retrieve facts from your existing articles.
+
+---
+
+## The "AI-First" Page Architecture
+
+To make your legacy content quotable, you must abandon the "Wall of Text" format. Adopt this semantic structure immediately.
+
+### 1. The "Summary Box" (The Prime Real Estate)
+
+AI models weigh the first 200 words heavily. Do not bury the lead. Place a `<div>` or `<aside>` block immediately after the H1.
+
+**Implementation Example:**
+
+```html
+<aside class="ai-summary-box" style="background: #f9f9f9; padding: 15px; border-left: 5px solid #000;">
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li><strong>Definition:</strong> Technical Retrofitting converts unstructured text into structured data for AI.</li>
+    <li><strong>Core Benefit:</strong> Increases the probability of being cited as a "Direct Answer" in AI search results.</li>
+    <li><strong>Action:</strong> Implement Schema.org markup and semantic HTML tags (article, section, aside).</li>
+  </ul>
+</aside>
+```
+
+### 2. Semantic HTML Tags vs. Generic Divs
+
+Generic `<div>` tags are noise to an AI. Replace them with semantic tags that define the _relationship_ of the content.
+
+| Legacy Element (Bad) | Retrofitted Element (Good) | Why AI Prefers It |
+| :-- | :-- | :-- |
+| `<div class="header">` | `<header>` | Identifies the introductory scope. |
+| `<div class="content">` | `<article>` | Signals self-contained, syndicatable content. |
+| `<div class="sidebar">` | `<aside>` | Marks content as tangentially related (context). |
+| `<b>Important</b>` | `<strong>` | Indicates semantic importance, not just visual bolding. |
+
+### 3. The "Listicle" Conversion
+
+AI models prefer structured lists over dense paragraphs for extracting steps or features.
+
+- **Before (Hard to Parse):** "When updating content, you should first check the dates, then look for broken links, and finally update the statistics to ensure accuracy."
+- **After (AI-Ready):** **Steps to Retrofit Content:**
+  1. **Audit Timestamp:** Verify publication and modification dates.
+  2. **Link Health:** Repair or remove 404 errors.
+  3. **Data Verification:** Replace stats older than 2 years with fresh sources.
+
+---
+
+## 3-Step Retrofit Workflow
+
+Apply this workflow to your top 20% traffic pages first.
+
+### Step 1: Header Restructuring (H-Tag Logic)
+
+Review your H2 and H3 tags. Are they clever or clear?
+
+- _Clever (Bad):_ "The Secret Sauce"
+- _Clear (Good):_ "How to Optimize HTML for AI Search"
+- _Action:_ Rename headers to match specific user queries (Long-tail Keywords).
+
+### Step 2: Injecting JSON-LD Schema
+
+Don't rely on the AI to guess the context. Explicitly tell it using [Schema.org](https://schema.org).
+
+- **Must-Have:** `Article` or `BlogPosting` schema.
+- **Power Move:** Add `FAQPage` schema if your post answers questions.
+- **Citation Booster:** Use `citation` or `mentions` property to link to external authorities.
+
+### Step 3: The "Fact Check" Audit
+
+Generative Engines punish hallucinations. If your legacy content contains outdated facts, your entire domain authority suffers.
+
+- **Rule:** If a sentence contains a number (year, %, \$), verify it.
+- **Format:** "According to [Source Name](URL), \[Stat\]..."
+
+---
+
+## FAQ: Retrofitting Essentials
+
+**Q: Does changing HTML structure affect current SEO rankings?** **A:** Yes, typically for the better. Semantic HTML improves accessibility and helps Google's crawlers understand page context, which aligns with modern SEO and GEO best practices.
+
+**Q: How long does it take to retrofit one article?** **A:** A basic retrofit (Summary Box \+ Header fix) takes 15–20 minutes. A full retrofit (Schema \+ Fact Check) takes 45–60 minutes per article.
+
+**Q: Which pages should I retrofit first?** **A:** Prioritize "Evergreen" content—articles that are conceptually relevant but technically outdated. Focus on pages with high impressions but declining clicks.
+
+---
+
+## References
+
+- **Google Search Central** | _Introduction to Structured Data_ | [https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- **Schema.org** | _Article Schema Documentation_ | [https://schema.org/Article](https://schema.org/Article)
+- **Mozilla MDN** | _Semantics in HTML_ | [https://developer.mozilla.org/en-US/docs/Glossary/Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+
+---
+
+## Related Articles
+
+- [The “Summary Box” Tactic: How to Optimize Existing Content for Direct Answers and Featured Snippets](/docs/geo-playbook/geo-cheat-keys/getting-started/summary-box-tactic-ai-optimization)
+- [Header Restructuring: A Guide to Converting Creative Headers into Question-Based H2s for AI Parsing](/docs/geo-playbook/geo-cheat-keys/getting-started/header-restructuring-guide-ai-search)
+- [Schema Markup Injection: How to Add Speakable, FAQ, and Article Schema to Legacy Content](/docs/geo-playbook/geo-cheat-keys/getting-started/schema-markup-injection-geo)
+- [List & Table Formatting: Best Practices for Structuring Unstructured Text into AI-Friendly Lists & Tables](/docs/geo-playbook/geo-cheat-keys/getting-started/list-table-formatting-ai-geo-deca)
+
+---
+
+> _Written by Maddie Choi at DECA, a content platform focused on AI visibility._

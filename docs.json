@@ -18,36 +18,77 @@
         "groups": [
           {
             "group": "What Changed This Week",
-            "pages": [],
+            "pages": [
+              "ai-ranking-changes/2026-07-05",
+              "ai-ranking-changes/2026-06-28",
+              "ai-ranking-changes/2026-06-21",
+              "ai-ranking-changes/2026-06-14",
+              "ai-ranking-changes/2026-06-07"
+            ],
             "icon": "line-chart"
           },
           {
-            "group": "Comparisons",
+            "group": "Best tools",
             "icon": "trophy-star",
             "pages": [
+              "best-tools/brightedge-vs-ahrefs",
+              "best-tools/midjourney-vs-adobe-firefly",
+              "best-tools/semrush-vs-ahrefs",
+              "best-tools/hubspot-vs-salesforce",
+              "best-tools/asana-vs-monday",
+              "best-tools/clickup-vs-asana",
+              "best-tools/klaviyo-vs-mailchimp",
+              "best-tools/zendesk-vs-intercom",
               "best-tools/semrush-vs-brightedge"
             ]
           },
           {
             "group": "What's Working Now",
             "icon": "calendar-week",
-            "pages": []
+            "pages": [
+              "seo-vs-geo-top5-llms-txt",
+              "crm-four-geo-paths",
+              "Readable-Is-Not-Recommended",
+              "project-management-ai-rankings-llms-txt",
+              "four-categories-window-still-open",
+              "nfluencer-marketing-geo-patterns",
+              "geo-tools-ai-visibility-rate",
+              "8-weeks-ai-recommendations",
+              "two-filters-one-invisible-wall",
+              "same-geo-playbook-different-results",
+              "category-first-geo-playbook",
+              "seo-vs-geo",
+              "profound-drops-ai-mentions-geo-apr-26",
+              "ai-crm-rankings-apr-26-2026"
+            ]
           }
         ]
       },
       {
         "tab": "Docs",
         "pages": [
+          "geo-playbook/overview",
           {
             "group": "Get Started",
             "icon": "add",
-            "pages": [],
+            "pages": [
+              "geo-playbook/geo-cheat-keys/getting-started/getting-started-with-GEO",
+              "geo-playbook/geo-cheat-keys/getting-started/spoke-strategy-medium-linkedin",
+              "geo-playbook/geo-cheat-keys/getting-started/osmu-workflow-ai-visibility",
+              "geo-playbook/geo-cheat-keys/getting-started/technical-retrofit-ai-parsing",
+              "geo-playbook/geo-cheat-keys/getting-started/summary-box-tactic-ai-optimization",
+              "geo-playbook/geo-cheat-keys/getting-started/header-restructuring-guide-ai-search",
+              "geo-playbook/geo-cheat-keys/getting-started/schema-markup-injection-geo",
+              "geo-playbook/geo-cheat-keys/getting-started/list-table-formatting-ai-geo-deca"
+            ],
             "hidden": true
           },
           {
             "group": "Open rankings ",
             "icon": "ranking-star",
-            "pages": []
+            "pages": [
+              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/why-open-rankings-matter"
+            ]
           },
           {
             "group": "Brand insights",
@@ -63,28 +104,47 @@
                 "group": "GEO practice",
                 "icon": "sparkle",
                 "expanded": true,
-                "pages": []
+                "pages": [
+                  "geo-playbook/market-radar/industry-analysis/reddit-content-void-strategy",
+                  "geo-playbook/market-radar/2026-trends/2026-GEO-Market-Radar",
+                  "geo-playbook/leaked-playbooks/industry-secrets/tally-geo-case-study-chatgpt-traffic"
+                ]
               },
               {
                 "group": "Fundamentals",
                 "expanded": true,
-                "pages": []
+                "pages": [
+                  "geo-playbook/geo-cheat-keys/fundamentals/what-is-geo",
+                  "geo-playbook/geo-cheat-keys/fundamentals/the-3-pillars-of-GEO",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-context-lock-protocol",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-technical-authority-source-of-truth",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-entity-optimization"
+                ]
               },
               {
                 "group": "Advanced Tactics",
-                "pages": []
+                "pages": [
+                  "geo-playbook/geo-cheat-keys/advanced-tactics/geo-prompt-reverse-engineering",
+                  "geo-playbook/geo-cheat-keys/advanced-tactics/geo-publishing-strategy-hub-spoke"
+                ]
               }
             ]
           },
           {
             "group": "What's New",
             "icon": "stars",
-            "pages": []
+            "pages": [
+              "deca/whats-new/changelog"
+            ]
           },
           {
             "group": "Support Hub",
             "icon": "circle-question",
-            "pages": []
+            "pages": [
+              "deca/support-hub/plans-and-pricing",
+              "deca/support-hub/legal",
+              "deca/support-hub/contact"
+            ]
           }
         ]
       },
@@ -107,6 +167,7 @@
             "icon": "eyes",
             "hidden": true,
             "pages": [
+              "deca/deca-sneak-peek/maddies-note",
               {
                 "group": "Building DECA",
                 "pages": []
@@ -126,10 +187,15 @@
             "icon": "notebook",
             "hidden": true,
             "pages": [
+              "deca/deca-handbook/overview",
               {
                 "group": "Getting Started",
                 "hidden": true,
-                "pages": []
+                "pages": [
+                  "deca/deca-handbook/getting-started/deca-project-setup-guide",
+                  "deca/deca-handbook/getting-started/add-your-brand",
+                  "deca/deca-handbook/getting-started/work-with-deca"
+                ]
               },
               {
                 "group": "Core Features",
