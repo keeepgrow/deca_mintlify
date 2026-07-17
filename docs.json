@@ -29,7 +29,7 @@
             "icon": "line-chart"
           },
           {
-            "group": "Best tools",
+            "group": "Best Comparision",
             "icon": "trophy-star",
             "pages": [
               "best-tools/brightedge-vs-ahrefs",
@@ -61,6 +61,13 @@
               "seo-vs-geo",
               "profound-drops-ai-mentions-geo-apr-26",
               "ai-crm-rankings-apr-26-2026"
+            ]
+          },
+          {
+            "group": "Best tools",
+            "icon": "toolbox",
+            "pages": [
+              "untitled-page"
             ]
           }
         ]
