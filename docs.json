@@ -67,7 +67,8 @@
             "group": "Best tools",
             "icon": "toolbox",
             "pages": [
-              "best-tools/best-seo-tools"
+              "best-tools/best-seo-tools",
+              "best-tools/best-geo-tools"
             ]
           }
         ]
