@@ -30,7 +30,7 @@
           },
           {
             "group": "Best Comparision",
-            "icon": "trophy-star",
+            "icon": "code-compare",
             "pages": [
               "best-tools/brightedge-vs-ahrefs",
               "best-tools/midjourney-vs-adobe-firefly",
@@ -64,11 +64,15 @@
             ]
           },
           {
-            "group": "Best tools",
+            "group": "2026 Best tools",
             "icon": "toolbox",
             "pages": [
               "best-tools/best-seo-tools",
-              "best-tools/best-geo-tools"
+              "best-tools/best-crm-software",
+              "best-tools/best-project-management-tools",
+              "best-tools/new-page-4",
+              "best-tools/new-page-5",
+              "best-tools/best-email-marketing-tools"
             ]
           }
         ]
