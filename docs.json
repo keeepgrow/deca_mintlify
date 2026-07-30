@@ -317,5 +317,12 @@
   },
   "interaction": {
     "drilldown": false
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/what-is-decageo",
+      "permanent": true
+    }
+  ]
 }
