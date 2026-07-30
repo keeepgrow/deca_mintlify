@@ -1,0 +1,70 @@
+---
+title: "How do Rank and weekly movement work?"
+sidebarTitle: "Rank & Weekly Movement"
+description: "Rank is a brand's chart position in its category, determined by DECA Score. Weekly movement shows how that position changed since last week."
+keywords: ["ai ranking", "brand rank", "weekly movement", "top mover", "new entry", "ai recommendation ranking"]
+authors: ["DecaGEO Team"]
+---
+
+Rank is a brand's overall position on its category chart, determined by [DECA Score](/metrics/deca-score) — Rank 1 is the highest DECA Score in the category. Weekly movement is the change in that position since last week, shown next to every rank.
+
+## Overview
+
+Every chart is re-ranked in the same weekly cycle the scores are collected in, so rank and movement always describe the same week of AI answers.
+
+The chart ranks every brand AI recommends — there is no artificial cutoff like a Top 10 or Top 100. If a brand isn't on the chart, AI hasn't recommended it as a solution in this category's context yet.
+
+## How Rank and movement are determined
+
+```text
+Rank            = position when the category is sorted by DECA Score   # 1 = highest
+Weekly movement = last week's rank − this week's rank                  # positive = climbed
+```
+
+Products with the same DECA Score share the same rank, and the ranks that follow skip the tied places.
+
+<Frame caption="Rank and weekly movement on a category chart">
+  ![Rank column with weekly movement arrows on a DecaGEO category chart](/images/docs/rank-weekly-movement-chart.png)
+</Frame>
+
+## How to read the movement signals
+
+Every category chart opens with three signals for the week:
+
+| Signal | What it means |
+| :--- | :--- |
+| **Leader** | The week's Rank 1 in the category |
+| **Top Mover** | An already-ranked product climbing on real gains of its own — not just because rivals dropped off |
+| **New Entry** | A product landing on the chart for the first time |
+
+A one-week jump is a data point; a multi-week climb is a trend. Check [Chart History](/using/chart-history) before treating a spike as momentum.
+
+## Why Rank & weekly movement matter
+
+### Rank is the shortlist, made visible
+
+When AI answers a category question, it names a handful of brands in order. Rank aggregates those orders across hundreds of answers — the closest thing there is to the shortlist AI puts in front of buyers.
+
+### Movement separates news from noise
+
+Because Top Mover status requires gains of a product's own, movement flags what actually changed in AI's behavior this week — not just reshuffling caused by someone else's drop.
+
+### It's the scoreboard for your GEO work
+
+Scores explain the *why*; rank is the outcome. After you ship changes, the following weeks' movement is the simplest read on whether the category order shifted in your favor.
+
+## Related metrics
+
+<CardGroup cols={2}>
+  <Card title="DECA Score" icon="gauge" href="/metrics/deca-score">
+    The 0–100 score that determines rank order.
+  </Card>
+
+  <Card title="Mention Rate" icon="speaker" href="/metrics/mention-rate">
+    How often you're recommended at all, regardless of position.
+  </Card>
+
+  <Card title="Segment Position" icon="layer-group" href="/metrics/segment-position">
+    Your rank inside a specific buyer segment, not just the overall chart.
+  </Card>
+</CardGroup>

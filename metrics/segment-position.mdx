@@ -1,0 +1,62 @@
+---
+title: "What is Segment Position?"
+sidebarTitle: "Segment Position"
+description: "Segment Position is a brand's rank when AI is asked by a specific type of buyer — defined by the buyer conditions of its category, such as business scale or use case."
+keywords: ["segment position", "buyer segment", "market segment ranking", "ai recommendation by segment", "buyer persona"]
+authors: ["DecaGEO Team"]
+---
+
+Segment Position is your rank inside a specific buyer context, rather than the overall category chart. Because DecaGEO's queries are generated from buyer personas with conditions defined per category — the CRM chart, for example, filters by business scale, use case, and integration — every brand also has a rank for each of those segments.
+
+## Overview
+
+DecaGEO's segment filters don't just narrow results — they simulate different buyers. Filtering by a segment replays only the queries that match that buyer context. You're not slicing one dataset differently; you're seeing what AI recommends when the question comes from a different type of buyer.
+
+<Info>
+  Segment filters are available on every category chart. The segments themselves follow the decision conditions that matter in each category, so they vary from one chart to another.
+</Info>
+
+## How Segment Position is determined
+
+```text
+Segment Position = rank by DECA Score, computed only from responses
+                   to the queries matching that segment's buyer context
+```
+
+The scoring is identical to the overall chart — same points, same exclusion rules — applied to a narrower pool of responses.
+
+> **Example:** "What CRM tools work best for a small marketing team on a tight budget?" and "What enterprise CRM platforms offer advanced automation for large sales teams?" are different personas asking the same category. Each answer counts toward its own segment — and AI's recommendations often differ between the two.
+
+<Frame caption="Market Segment filters on a category chart">
+  ![Market Segment filter panel on a DecaGEO category chart](/images/docs/segment-position-chart.png)
+</Frame>
+
+## Why Segment Position matters
+
+### Buyers don't ask generic questions
+
+Real buyers ask with their situation attached. Segment Position mirrors those situational questions, so it's closer to what your actual buyers see than any overall number.
+
+### It shows where you actually win
+
+A brand that ranks #1 overall might drop to #5 for enterprise buyers — and vice versa. The segment view reveals the markets where AI already prefers you, and the ones where you're invisible.
+
+### It tells you where to focus
+
+A near-win segment is a sharper target than a whole category. It also surfaces segments no product has locked down yet — open ground you can claim first.
+
+## Related metrics
+
+<CardGroup cols={2}>
+  <Card title="DECA Score" icon="gauge" href="/metrics/deca-score">
+    The 0–100 score behind every rank, overall or segment.
+  </Card>
+
+  <Card title="Mention Rate" icon="speaker" href="/metrics/mention-rate">
+    How often you're recommended at all, regardless of position.
+  </Card>
+
+  <Card title="Rank & weekly movement" icon="trophy" href="/metrics/rank-and-weekly-movement">
+    Your overall chart position, and how it changed this week.
+  </Card>
+</CardGroup>

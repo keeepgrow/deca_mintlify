@@ -1,0 +1,8 @@
+# Claude Code 작업 문서 (내부 계획·스펙 — 배포 제외)
+.claude/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/

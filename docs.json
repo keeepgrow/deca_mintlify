@@ -80,43 +80,71 @@
       {
         "tab": "Docs",
         "pages": [
-          "geo-playbook/overview",
+          "what-is-decageo",
           {
             "group": "Get Started",
-            "icon": "add",
+            "icon": "rocket",
             "pages": [
-              "geo-playbook/geo-cheat-keys/getting-started/getting-started-with-GEO",
-              "geo-playbook/geo-cheat-keys/getting-started/spoke-strategy-medium-linkedin",
-              "geo-playbook/geo-cheat-keys/getting-started/osmu-workflow-ai-visibility",
-              "geo-playbook/geo-cheat-keys/getting-started/technical-retrofit-ai-parsing",
-              "geo-playbook/geo-cheat-keys/getting-started/summary-box-tactic-ai-optimization",
-              "geo-playbook/geo-cheat-keys/getting-started/header-restructuring-guide-ai-search",
-              "geo-playbook/geo-cheat-keys/getting-started/schema-markup-injection-geo",
-              "geo-playbook/geo-cheat-keys/getting-started/list-table-formatting-ai-geo-deca"
-            ],
-            "hidden": true
+              "get-started/find-your-brands-rank",
+              "get-started/how-to-read-the-ranking",
+              "get-started/improve-your-rank"
+            ]
           },
           {
-            "group": "Open rankings ",
+            "group": "Metrics",
+            "icon": "chart-simple",
+            "pages": [
+              "metrics/deca-score",
+              "metrics/mention-rate",
+              "metrics/rank-and-weekly-movement",
+              "metrics/segment-position"
+            ]
+          },
+          {
+            "group": "Using DecaGEO",
+            "icon": "table-columns",
+            "pages": [
+              "using/ai-ranking-chart",
+              {
+                "group": "Product Details",
+                "pages": [
+                  "using/product-details",
+                  "using/chart-history",
+                  "using/segment-position-tab",
+                  "using/off-page-citations",
+                  "using/on-page-geo-patterns",
+                  "using/prompt-and-ai-response"
+                ]
+              },
+              "using/dashboard",
+              "using/compare",
+              "using/add-your-brand"
+            ]
+          },
+          {
+            "group": "Open Rankings",
             "icon": "ranking-star",
             "pages": [
               "geo-playbook/geo-cheat-keys/tools-compare-and-stack/why-open-rankings-matter"
             ]
           },
           {
-            "group": "Brand insights",
-            "icon": "key",
-            "expanded": true,
-            "pages": []
-          },
-          {
             "group": "GEO Playbooks",
             "icon": "notebook",
             "pages": [
               {
+                "group": "Fundamentals",
+                "expanded": true,
+                "pages": [
+                  "geo-playbook/geo-cheat-keys/fundamentals/what-is-geo",
+                  "geo-playbook/geo-cheat-keys/fundamentals/the-3-pillars-of-GEO",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-technical-authority-source-of-truth",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-entity-optimization"
+                ]
+              },
+              {
                 "group": "GEO practice",
                 "icon": "sparkle",
-                "expanded": true,
                 "pages": [
                   "geo-playbook/market-radar/industry-analysis/reddit-content-void-strategy",
                   "geo-playbook/market-radar/2026-trends/2026-GEO-Market-Radar",
@@ -124,30 +152,13 @@
                 ]
               },
               {
-                "group": "Fundamentals",
-                "expanded": true,
-                "pages": [
-                  "geo-playbook/geo-cheat-keys/fundamentals/what-is-geo",
-                  "geo-playbook/geo-cheat-keys/fundamentals/the-3-pillars-of-GEO",
-                  "geo-playbook/geo-cheat-keys/fundamentals/geo-context-lock-protocol",
-                  "geo-playbook/geo-cheat-keys/fundamentals/geo-technical-authority-source-of-truth",
-                  "geo-playbook/geo-cheat-keys/fundamentals/geo-entity-optimization"
-                ]
-              },
-              {
                 "group": "Advanced Tactics",
                 "pages": [
                   "geo-playbook/geo-cheat-keys/advanced-tactics/geo-prompt-reverse-engineering",
-                  "geo-playbook/geo-cheat-keys/advanced-tactics/geo-publishing-strategy-hub-spoke"
+                  "geo-playbook/geo-cheat-keys/advanced-tactics/geo-publishing-strategy-hub-spoke",
+                  "geo-playbook/geo-cheat-keys/fundamentals/geo-context-lock-protocol"
                 ]
               }
-            ]
-          },
-          {
-            "group": "What's New",
-            "icon": "stars",
-            "pages": [
-              "deca/whats-new/changelog"
             ]
           },
           {
@@ -162,9 +173,30 @@
         ]
       },
       {
+        "tab": "Changelog",
+        "pages": [
+          "deca/whats-new/changelog"
+        ]
+      },
+      {
         "tab": "Archive",
         "hidden": true,
         "pages": [
+          {
+            "group": "Get Started",
+            "icon": "add",
+            "hidden": true,
+            "pages": [
+              "geo-playbook/geo-cheat-keys/getting-started/getting-started-with-GEO",
+              "geo-playbook/geo-cheat-keys/getting-started/spoke-strategy-medium-linkedin",
+              "geo-playbook/geo-cheat-keys/getting-started/osmu-workflow-ai-visibility",
+              "geo-playbook/geo-cheat-keys/getting-started/technical-retrofit-ai-parsing",
+              "geo-playbook/geo-cheat-keys/getting-started/summary-box-tactic-ai-optimization",
+              "geo-playbook/geo-cheat-keys/getting-started/header-restructuring-guide-ai-search",
+              "geo-playbook/geo-cheat-keys/getting-started/schema-markup-injection-geo",
+              "geo-playbook/geo-cheat-keys/getting-started/list-table-formatting-ai-geo-deca"
+            ]
+          },
           {
             "group": "DECA x ChatGPT Synergy",
             "hidden": true,

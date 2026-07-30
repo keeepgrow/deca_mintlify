@@ -1,0 +1,56 @@
+---
+title: "What is Mention Rate?"
+sidebarTitle: "Mention Rate"
+description: "Mention Rate is the percentage of AI responses that recommend a brand when asked about its category — the brand's AI share of voice."
+keywords: ["mention rate", "ai share of voice", "ai mentions", "brand mentions in ai answers", "ai visibility"]
+authors: ["DecaGEO Team"]
+---
+
+Mention Rate is the percentage of AI responses that mention a brand, regardless of position. A 72% Mention Rate means the brand was mentioned in 72 out of every 100 relevant AI responses.
+
+## Overview
+
+In DecaGEO, a **mention** is counted only when AI recommends the brand as a solution to a category question. Simple name-drops, negative references, and comparison filler are excluded — so Mention Rate measures how often you're genuinely recommended, not how often your name appears.
+
+## How Mention Rate is calculated
+
+```text
+Mention Rate (%) = 100 × responses that recommend the brand
+                       ÷ all responses collected for the category
+```
+
+The count runs over all responses collected for the category in the same weekly window.
+
+<Frame caption="Mention Rate on a category chart">
+  ![Mention Rate column on a DecaGEO category chart](/images/docs/mention-rate-category-chart.png)
+</Frame>
+
+## Why Mention Rate matters
+
+### It's your AI share of voice
+
+When buyers ask AI about your category, this is the share of answers you're part of — benchmarked against every competitor on the chart.
+
+### It separates frequency from position
+
+Where the [DECA Score](/metrics/deca-score) weights each recommendation by its position, Mention Rate ignores position entirely. Read together, they tell you whether a weak score comes from being absent or from ranking low when present — so you work on the right problem.
+
+### Inclusion comes first
+
+You can't rank high in answers you're not part of. Mention Rate shows whether AI includes you at all — the first thing to build when starting from low visibility.
+
+## Related metrics
+
+<CardGroup cols={2}>
+  <Card title="DECA Score" icon="gauge" href="/metrics/deca-score">
+    Recommendation frequency weighted by position, on a 0–100 scale.
+  </Card>
+
+  <Card title="Rank & weekly movement" icon="trophy" href="/metrics/rank-and-weekly-movement">
+    Where your score places you in the category, and how that changed this week.
+  </Card>
+
+  <Card title="Segment Position" icon="layer-group" href="/metrics/segment-position">
+    Your rank inside a specific buyer segment, not just the overall chart.
+  </Card>
+</CardGroup>

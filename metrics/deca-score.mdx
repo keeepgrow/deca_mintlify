@@ -1,0 +1,68 @@
+---
+title: "What is the DECA Score?"
+sidebarTitle: "DECA Score"
+description: "The DECA Score is a 0–100 measure of how strongly AI recommends a brand in its category — how often it's recommended, weighted by how highly it ranks."
+keywords: ["deca score", "ai visibility score", "ai recommendation", "ai brand ranking", "generative engine optimization"]
+authors: ["DecaGEO Team"]
+---
+
+The DECA Score is a 0–100 measure of how strongly AI recommends a brand in its category. It combines two things: how often the brand is recommended, and how high it appears when it is. A score of 100 means the brand was recommended first in every response we collected.
+
+## Overview
+
+Every week, DecaGEO sends hundreds of buyer-like questions to AI for each category, then reads which brands the answers recommend and in what order. The DECA Score condenses all of those answers into a single number per brand, so an entire category can be ranked on one scale.
+
+<Info>
+  Only genuine recommendations count. A brand earns points only when AI recommends it as a solution — simple name-drops, negative references, and comparison filler are excluded. The score reflects real AI endorsement, not raw mention volume.
+</Info>
+
+## How the DECA Score is calculated
+
+**Position** is the order in which a brand appears within a single AI response: if AI recommends five brands, the first brand listed is position 1, the second is position 2, and so on.
+
+```text
+For every weekly response:
+    points earned = position points        # 1st place earns the most,
+                                           # last place the fewest,
+                                           # not recommended = 0
+
+DECA Score = 100 × points earned ÷ maximum possible points
+```
+
+> **Example:** If an AI response lists 5 brands and HubSpot appears first, HubSpot earns 5 points. If it appears third, it earns 3 points. If it doesn't appear at all, it earns 0. Repeat across hundreds of responses, normalize, and you get the DECA Score.
+
+A brand recommended in first position 40% of the time will score higher than a brand recommended in last position 70% of the time — where you appear matters as much as whether you appear.
+
+<Frame caption="DECA Score on a category chart">
+  ![DECA Score column on a DecaGEO category chart](/images/docs/deca-score-category-chart.png)
+</Frame>
+
+## Why the DECA Score matters
+
+### It measures endorsement, not noise
+
+A rising DECA Score can mean only one thing: AI is recommending you more often, in higher positions. Name presence alone can't move it.
+
+### It's comparable across your whole category
+
+Because the measurement conditions are identical for every brand, the score works as a benchmark. You see not just your own number, but the exact gap between you and every product above you.
+
+### It shows whether your GEO work is landing
+
+The score is refreshed every week under fixed conditions. Ship a change — new content structure, better third-party coverage — and the following weeks tell you whether AI noticed.
+
+## Related metrics
+
+<CardGroup cols={2}>
+  <Card title="Mention Rate" icon="speaker" href="/metrics/mention-rate">
+    How often you're recommended at all, regardless of position.
+  </Card>
+
+  <Card title="Rank & weekly movement" icon="trophy" href="/metrics/rank-and-weekly-movement">
+    Where your score places you in the category, and how that changed this week.
+  </Card>
+
+  <Card title="Segment Position" icon="layer-group" href="/metrics/segment-position">
+    Your rank inside a specific buyer segment, not just the overall chart.
+  </Card>
+</CardGroup>
