@@ -320,6 +320,11 @@
   },
   "redirects": [
     {
+      "source": "/geo-playbook/overview",
+      "destination": "/what-is-decageo",
+      "permanent": true
+    },
+    {
       "source": "/",
       "destination": "/what-is-decageo",
       "permanent": true
