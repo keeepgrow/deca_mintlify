@@ -10,7 +10,7 @@ keywords: ["GPT-5.6 vs GPT-5.4", "ChatGPT search behavior", "site: operator Chat
 "twitter:image": "/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png"
 ---
 
-**Brown Seo**, Founding Engineer (AI & Infrastructure) · Last updated: 07.31.2026
+[**Brown Seo**](https://www.linkedin.com/in/brown-seo-78872041b), Founding Engineer (AI & Infrastructure) · Last updated: 07.31.2026
 
 **We ran the same 10 software categories through GPT-5.4 and GPT-5.6, two weeks each. The search grammar flipped at the model boundary. Vendor pages kept ~95% of citations either way.**
 
@@ -47,8 +47,13 @@ Within each model version, the numbers are boringly stable. Across the boundary,
 | July 25 | GPT-5.6 Terra | 90.5% | 10.9 | 6.3 |
 | August 1 | GPT-5.6 Terra | 91.0% | 11.0 | 6.2 |
 
-![Line chart: site: operator share of ChatGPT fan-out queries in DecaGEO's weekly panel rises from 33.8% and 38.2% on GPT-5.4 to 90.5% and 91.0% on GPT-5.6 Terra, with the jump at the July 25, 2026 model boundary.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png)
-*Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.*
+<Frame caption="Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.">
+  <img
+    src="/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png"
+    alt="Line chart: site: operator share of ChatGPT fan-out queries in DecaGEO's weekly panel rises from 33.8% and 38.2% on GPT-5.4 to 90.5% and 91.0% on GPT-5.6 Terra, with the jump at the July 25, 2026 model boundary."
+    className="mx-auto"
+  />
+</Frame>
 
 GPT-5.4 spread its checking across brand-name searches like "Moz Pro pricing official" and reached for `site:` on about a third of them. GPT-5.6 nearly doubles the query count while scoping nine in ten searches to a specific vendor domain. It also cites half as much, 6.3 citations per response instead of 12.5, despite reading more. It searches harder and selects harder.
 
@@ -69,8 +74,13 @@ The category view says the rewrite was global:
 | AI Writing | 88.4 / 87.6 | 35.3 / 32.7 |
 | GEO | 67.6 / 73.3 | 48.7 / 45.3 |
 
-![Dumbbell chart comparing average site: share per category: nine software categories rise from 20–43% on GPT-5.4 to 88–96% on GPT-5.6 Terra, while the GEO category rises only to about 70%, the lowest lock-in.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-2-categories.png)
-*Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.*
+<Frame caption="Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.">
+  <img
+    src="/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-2-categories.png"
+    alt="Dumbbell chart comparing average site: share per category: nine software categories rise from 20–43% on GPT-5.4 to 88–96% on GPT-5.6 Terra, while the GEO category rises only to about 70%, the lowest lock-in."
+    className="mx-auto"
+  />
+</Frame>
 
 We were not the only ones to see the direction. Writesonic reran their 50-prompt study on consumer ChatGPT the week [GPT-5.6 Sol shipped](https://writesonic.com/blog/gpt-5-6-sol-citation-study-vs-gpt-5-5). On their surface, `site:` usage went from 12.6% of searches on GPT-5.5 to 59–71% depending on effort tier, and first-party citations rose 11 points on the default tier. Konitzny's Luna-tier data put the operator near 43% against almost zero on GPT-5.5. That makes three tiers of the same model family, measured on three different surfaces, all moving the same way. The sizes disagree because the surfaces do, which is why their numbers appear next to ours and never on the same scale.
 
@@ -82,8 +92,13 @@ On GPT-5.4, with `site:` at 38%, vendor-owned domains were taking 94.6% of citat
 
 What moved is the route. We checked, for every citation, whether its host had been explicitly targeted by a `site:` query in the same response. On GPT-5.4, 25.7% of citations arrived that way. The rest reached the same vendor pages through ordinary brand-name searches. On GPT-5.6 the share is 87.7%, replicated at 87.2% the following week.
 
-![Two-line chart: vendor-owned share of citations stays flat near 95% across the model change, while the share of citations arriving via a site:-targeted query jumps from 25.7% to 87.7% and replicates at 87.2%.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-3-destination-route.png)
-*Chart: DecaGEO citation and trace data, OpenAI API, US, weeks of Jul 18–Aug 1, 2026.*
+<Frame caption="Chart: DecaGEO citation and trace data, OpenAI API, US, weeks of Jul 18–Aug 1, 2026.">
+  <img
+    src="/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-3-destination-route.png"
+    alt="Two-line chart: vendor-owned share of citations stays flat near 95% across the model change, while the share of citations arriving via a site:-targeted query jumps from 25.7% to 87.7% and replicates at 87.2%."
+    className="mx-auto"
+  />
+</Frame>
 
 The version change rewired how citations reach vendor pages, not whether they do. In our categories the destination was saturated under both grammars.
 
@@ -123,19 +138,19 @@ This dial has reversed before. The `site:` operator went from 40% of searches un
 
 ## FAQ
 
-**Does GPT-5.6 search the web differently from GPT-5.4?**
+### Does GPT-5.6 search the web differently from GPT-5.4?
 Yes. In DecaGEO's weekly panel, GPT-5.6 Terra issued nearly twice as many fan-out queries per response as GPT-5.4 (10.9–11.0 vs 5.8–6.0) and scoped 90–91% of them with the `site:` operator, against 34–38% on GPT-5.4. It also cited about half as many sources per answer.
 
-**Why did third-party citations drop in ChatGPT's answers?**
+### Why did third-party citations drop in ChatGPT's answers?
 In our B2B software tracking, the drop is a side effect of search grammar, not a reranking of sources. GPT-5.6 routes almost all verification searches directly to vendor domains, which squeezed the already-thin third-party share of citations from about 1.9% to about 0.3% in our sample.
 
-**Does ChatGPT discover new brands when it searches the web?**
+### Does ChatGPT discover new brands when it searches the web?
 Almost never in our logs. Open discovery queries with no brand name were 0.4% of searches on GPT-5.4 and under 0.1% on GPT-5.6. The model arrives with its candidate brands and uses search to verify details about them.
 
-**What is a site: query in ChatGPT's fan-out?**
+### What is a site: query in ChatGPT's fan-out?
 A fan-out is the set of background searches ChatGPT runs before answering. A `site:` query restricts one of those searches to a single domain, for example `site:hubspot.com pricing`, which tells the retrieval layer to fetch results only from that vendor's site.
 
-**Should I optimize my own site or third-party mentions for AI visibility?**
+### Should I optimize my own site or third-party mentions for AI visibility?
 Both, for different layers. Third-party mentions build the upstream layer, whether the model considers your brand at all, which our data shows is decided before any search runs. Your own pricing and feature pages decide the downstream layer, whether the current model's `site:` verification finds something to cite.
 
 ## How we measured
