@@ -47,6 +47,7 @@
             "group": "What's Working Now",
             "icon": "calendar-week",
             "pages": [
+              "gpt-5-6-vs-gpt-5-4-search-citation-behavior",
               "seo-vs-geo-top5-llms-txt",
               "crm-four-geo-paths",
               "Readable-Is-Not-Recommended",
