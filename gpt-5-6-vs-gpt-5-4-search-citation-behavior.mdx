@@ -1,0 +1,160 @@
+---
+title: "ChatGPT's site: Searches Jumped From 38% to 90%. Its Citations Barely Moved."
+sidebarTitle: "GPT-5.6 vs GPT-5.4: Search Behavior"
+description: "GPT-5.6 scopes ~90% of its fan-out searches with the site: operator, up from 38% on GPT-5.4. Vendor pages still take ~95% of citations. What that means for optimizing your own site vs third-party mentions, from DecaGEO's weekly retrieval logs."
+keywords: ["GPT-5.6 vs GPT-5.4", "ChatGPT search behavior", "site: operator ChatGPT", "ChatGPT fan-out queries", "ChatGPT citations", "AI citation behavior change", "GPT-5.6 Terra", "model update AI visibility", "first-party vs third-party citations", "GEO model boundary", "ChatGPT verification searches", "AI search grammar"]
+"og:title": "GPT-5.6 vs GPT-5.4: How ChatGPT's Search & Citation Behavior Changed (2026)"
+"og:description": "GPT-5.6 scopes ~90% of its fan-out searches with the site: operator, up from 38% on GPT-5.4. Vendor pages still take ~95% of citations either way."
+"og:image": "/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png"
+"twitter:card": "summary_large_image"
+"twitter:image": "/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png"
+---
+
+**Brown Seo**, Founding Engineer (AI & Infrastructure) · Last updated: 07.31.2026
+
+**We ran the same 10 software categories through GPT-5.4 and GPT-5.6, two weeks each. The search grammar flipped at the model boundary. Vendor pages kept ~95% of citations either way.**
+
+---
+
+David Konitzny at Peec AI published [an analysis in mid-July](https://www.linkedin.com/pulse/how-do-llms-secretly-change-tracking-invisible-shifts-david-konitzny-g4pae/) about a habit measurement people know well. When AI search numbers move, we go hunting for the fault in our own content. The system doing the retrieving gets questioned far less often, even though his examples showed fan-out terms and source preferences shifting under ChatGPT while publishers changed nothing at all.
+
+We hit his scenario from the other side in late July. The third-party slice of citations in our tracking thinned to almost nothing within a week, and nothing on our side had shipped. The explanation turned out to be sitting in a part of the pipeline we log weekly but rarely headline, which is the set of search queries the model writes for itself before it answers.
+
+**The short version:** on July 25, 2026, our OpenAI tracking pipeline moved from GPT-5.4 to GPT-5.6. The model's shortlist of products did not change, and neither did the pages it cites. What changed is the grammar of its searching. GPT-5.4 checked the brands it already knew with brand-name queries and used the `site:` operator on 38% of its searches. GPT-5.6 locked that behavior in. Nine of every ten searches now go straight to a vendor's domain. Same shortlist, same destination pages, different route. And the route change is big enough to move any dashboard that counts citations.
+
+## What we watched
+
+DecaGEO runs the same fixed grid of commercial prompts every week against the OpenAI API in the US. Ten B2B software categories, roughly 714 responses per run, and the full search trace stored next to each answer's citations. This analysis covers four consecutive weeks, July 11 and July 18 on GPT-5.4, then July 25 and August 1 on GPT-5.6 Terra. Scope and caveats live in How we measured, below.
+
+## Neither model discovers. Both verify.
+
+The most stable fact in the logs is a zero. Across roughly 24,000 fan-out queries in four weeks, pure discovery searches, the kind that ask the open web who the candidates are ("best CRM tools" with no brand attached), never rose above half a percent on either model. GPT-5.4 ran them 0.4% of the time. GPT-5.6, under 0.1% (DecaGEO retrieval logs, weeks of July 11–August 1, 2026).
+
+Every other query names names. The model arrives already knowing which products belong in the answer and spends its searches confirming pricing, plan limits and feature lists, one vendor at a time. The target lists barely moved across the version boundary. Salesforce, HubSpot, Semrush, ServiceNow, Freshworks and Zendesk head the queue on both models, and the cited hosts are those vendors' own domains plus their docs and support subdomains.
+
+Seer Interactive asked this question from the other direction in March. Their six behavioral tests across 362,188 LLM responses supported the hypothesis that [citations are post-hoc](https://www.seerinteractive.com/insights/llm-ghost-citations-why-your-content-is-working-and-your-brand-isnt). In their reading, the model picks its brands from parametric memory first and then goes looking for sources to back the picks. They inferred that sequence from output behavior. Our tool-call logs show it directly, on both sides of the version boundary. One precision matters here. What the logs establish is observed sequencing, not a window into intent.
+
+That zero frames everything below. Whatever the version change did, it did not touch how candidates get chosen. It touched how they get checked.
+
+## The boundary: verification grammar flipped in one week
+
+Within each model version, the numbers are boringly stable. Across the boundary, they jump.
+
+| Week (2026) | Model | `site:` share of queries | Queries per response | Citations per response |
+|---|---|---|---|---|
+| July 11 | GPT-5.4 | 33.8% | 5.8 | 12.1 |
+| July 18 | GPT-5.4 | 38.2% | 6.0 | 12.5 |
+| July 25 | GPT-5.6 Terra | 90.5% | 10.9 | 6.3 |
+| August 1 | GPT-5.6 Terra | 91.0% | 11.0 | 6.2 |
+
+![Line chart: site: operator share of ChatGPT fan-out queries in DecaGEO's weekly panel rises from 33.8% and 38.2% on GPT-5.4 to 90.5% and 91.0% on GPT-5.6 Terra, with the jump at the July 25, 2026 model boundary.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-1-site-share.png)
+*Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.*
+
+GPT-5.4 spread its checking across brand-name searches like "Moz Pro pricing official" and reached for `site:` on about a third of them. GPT-5.6 nearly doubles the query count while scoping nine in ten searches to a specific vendor domain. It also cites half as much, 6.3 citations per response instead of 12.5, despite reading more. It searches harder and selects harder.
+
+The jump is not a drift. Two weeks of GPT-5.4 sit within a few points of each other, two weeks of GPT-5.6 within one point, and the boundary between them moves the `site:` share by 52 points. [SISTRIX documented the same shape](https://www.sistrix.com/blog/chatgpt-core-update/) in the citation layer at an earlier swap. When the model under ChatGPT changed in May, 47% of citations in their 3.8-million-response German panel moved within 48 hours. Normal daily variation in that panel was 1–2%. They called the event a core update and flagged their data as correlation rather than proven cause. Our logs put the same signature one layer down, in the queries themselves.
+
+The category view says the rewrite was global:
+
+| Category | GPT-5.6 (Jul 25 / Aug 1) | GPT-5.4 (Jul 18 / Jul 11) |
+|---|---|---|
+| Help Desk | 94.5 / 96.3 | 41.8 / 40.4 |
+| Project Management | 95.4 / 95.6 | 23.1 / 18.2 |
+| Marketing Automation | 96.1 / 95.2 | 39.8 / 39.4 |
+| CRM | 96.1 / 92.4 | 42.6 / 42.9 |
+| Email | 92.5 / 94.2 | 33.3 / 39.0 |
+| SEO | 93.4 / 91.3 | 29.2 / 24.8 |
+| Influencer | 88.5 / 90.2 | 55.1 / 31.4 |
+| AI Image | 89.2 / 89.9 | 23.7 / 16.4 |
+| AI Writing | 88.4 / 87.6 | 35.3 / 32.7 |
+| GEO | 67.6 / 73.3 | 48.7 / 45.3 |
+
+![Dumbbell chart comparing average site: share per category: nine software categories rise from 20–43% on GPT-5.4 to 88–96% on GPT-5.6 Terra, while the GEO category rises only to about 70%, the lowest lock-in.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-2-categories.png)
+*Chart: DecaGEO retrieval logs, OpenAI API, US, weeks of Jul 11–Aug 1, 2026.*
+
+We were not the only ones to see the direction. Writesonic reran their 50-prompt study on consumer ChatGPT the week [GPT-5.6 Sol shipped](https://writesonic.com/blog/gpt-5-6-sol-citation-study-vs-gpt-5-5). On their surface, `site:` usage went from 12.6% of searches on GPT-5.5 to 59–71% depending on effort tier, and first-party citations rose 11 points on the default tier. Konitzny's Luna-tier data put the operator near 43% against almost zero on GPT-5.5. That makes three tiers of the same model family, measured on three different surfaces, all moving the same way. The sizes disagree because the surfaces do, which is why their numbers appear next to ours and never on the same scale.
+
+## The destination didn't move
+
+Our working assumption going in was the intuitive one. If the model now interrogates vendor sites directly, vendor pages must be winning citations they didn't win before. The logs said the vendor pages had already won.
+
+On GPT-5.4, with `site:` at 38%, vendor-owned domains were taking 94.6% of citations in our categories. On GPT-5.6 the figure is 97.4% (DecaGEO citation data, weeks of July 18 and July 25, 2026). A 52-point change in search grammar bought 2.8 points of citation share, because there was almost nothing left to buy.
+
+What moved is the route. We checked, for every citation, whether its host had been explicitly targeted by a `site:` query in the same response. On GPT-5.4, 25.7% of citations arrived that way. The rest reached the same vendor pages through ordinary brand-name searches. On GPT-5.6 the share is 87.7%, replicated at 87.2% the following week.
+
+![Two-line chart: vendor-owned share of citations stays flat near 95% across the model change, while the share of citations arriving via a site:-targeted query jumps from 25.7% to 87.7% and replicates at 87.2%.](/images/gpt-5-6-vs-gpt-5-4-search-citation-behavior/chart-3-destination-route.png)
+*Chart: DecaGEO citation and trace data, OpenAI API, US, weeks of Jul 18–Aug 1, 2026.*
+
+The version change rewired how citations reach vendor pages, not whether they do. In our categories the destination was saturated under both grammars.
+
+The one population that did move is the thin third-party slice. Review sites, news and community sources held about 1.9% of citations under GPT-5.4 and about 0.3% under GPT-5.6. In absolute terms that is a handful of citations, so we treat it as an observed squeeze in our sample rather than an industry claim. But if your dashboard tracks off-page citations in a vendor-saturated category, this is the sliver whose disappearance you noticed.
+
+## It cites pages it never opened
+
+The model rarely opens the pages it cites. Logged page-opens run at 0.02–0.07 per response across all four weeks, against 6 to 12 citations per response, and in the July 25 week only 1.7% of citations shared a host with a page the model actually opened. That much we can measure directly. More than 98% of cited URLs never show up in a page-open event, so the citations are not coming from pages the model opened. Since the model's information surface during search is either a page it opened or the results it was shown, elimination points at the results surface, snippets included.
+
+Two limits keep this honest. Page-opens count only the tool calls the model exposes, so the 1.7% may understate real opens. And the positive half of the claim, that cited URLs sat in the search results the model saw, stays unverified for now, because our current logs store the queries the model wrote but not the result lists those searches returned. The direct check is parked until we collect them. We publish what we have anyway because the practical stakes are concrete. If citations are assembled from results pages, then whatever your title and extractable page copy show under `site:yourdomain.com <keyword>` is the exact surface being quoted.
+
+## The GEO category is the exception, and it's the model's choice
+
+One category refuses the pattern, and it happens to be ours. GEO tools sit at 67.6% and 73.3% `site:` share in the two GPT-5.6 weeks, lowest of all ten categories by 14 points or more, while mature categories cluster at 88–96%.
+
+Our first reading was a market story. GEO is a young category, the model doesn't have its vendors pinned down, so it probes with brand names instead of locking onto domains. The GPT-5.4 baseline broke that reading. Under 5.4, GEO sat above the category average, 48.7% and 45.3% against a 34–38% overall mean. The low lock-in is a GPT-5.6 behavior toward this category, not a stable property of the category itself.
+
+Our working read on why is that `site:` only works when the model is confident about a domain. In our GPT-5.4 traces from [the week of July 19](https://decageo.ai/category/geo-generative-engine-optimization?week=2026-07-19), the model repeatedly guessed wrong domains for young GEO brands, searching site:profound.com for a company that lives at tryprofound.com and cycling through daydream.co, .ai and .so for a brand at withdaydream.com. Where name-to-domain mappings are settled, GPT-5.6 locks on. Where they aren't, it falls back to brand-name probing. That stays a working model, with the usual boundary attached. DecaGEO measures the pattern, not its cause.
+
+For young categories the practical readings cut both ways. More of the query surface stays open to literal keyword matching, which is the door unknown brands can still walk through. The same looseness makes positions less sticky in both directions.
+
+## What this means
+
+### Treat a model boundary as a measurement boundary
+
+Citations per response halved at the swap in our pipeline. Any multi-week window that straddles July 25 mixes two citation economies, and any absolute count compared across the boundary will show a phantom cliff. Cite Solutions put the principle plainly during the previous transition: ["a model change is a measurement change, not a performance change."](https://cite.solutions/blog/gpt-5-5-brand-site-citation-drop) Reset baselines at the boundary and compare ratios, not counts. We now apply this rule to our own published analyses as standard practice.
+
+### Own site or third-party mentions? The data assigns each to a different layer.
+
+The candidate layer, meaning which brands the model considers at all, is upstream, parametric, and did not flinch across the version change. Nothing in a retrieval log rewards it directly, because verification only happens to brands already on the list. That layer gets built where models learn, through breadth of mentions across independent sources, on timescales set by training cutoffs. Third-party work pays there.
+
+The verification layer is downstream and regime-dependent. In the current regime it runs through a single gate. Does `site:yourdomain.com pricing` return a real, indexed, plainly extractable page? The same question applies to features and comparisons. That investment happens to be route-proof. Under a brand-name-search regime the same pages win on literal keyword matching, so it pays under either grammar.
+
+### The regime itself deserves humility
+
+This dial has reversed before. The `site:` operator went from 40% of searches under GPT-5.4 to [12.6% under GPT-5.5](https://writesonic.com/blog/gpt-5-5-citation-study-vs-gpt-5-4) and now past 90% in our GPT-5.6 logs, all within five months (external figures from Writesonic, ours from DecaGEO). Whether the current setting holds through the next version is not something four weeks of logs can answer, and we won't pretend otherwise. What the four weeks do establish is the shape of these changes. They are stable within a version and discontinuous at the boundary. The change was visible only in the query layer. Dashboards that watch final answers saw the effect without the cause.
+
+## FAQ
+
+**Does GPT-5.6 search the web differently from GPT-5.4?**
+Yes. In DecaGEO's weekly panel, GPT-5.6 Terra issued nearly twice as many fan-out queries per response as GPT-5.4 (10.9–11.0 vs 5.8–6.0) and scoped 90–91% of them with the `site:` operator, against 34–38% on GPT-5.4. It also cited about half as many sources per answer.
+
+**Why did third-party citations drop in ChatGPT's answers?**
+In our B2B software tracking, the drop is a side effect of search grammar, not a reranking of sources. GPT-5.6 routes almost all verification searches directly to vendor domains, which squeezed the already-thin third-party share of citations from about 1.9% to about 0.3% in our sample.
+
+**Does ChatGPT discover new brands when it searches the web?**
+Almost never in our logs. Open discovery queries with no brand name were 0.4% of searches on GPT-5.4 and under 0.1% on GPT-5.6. The model arrives with its candidate brands and uses search to verify details about them.
+
+**What is a site: query in ChatGPT's fan-out?**
+A fan-out is the set of background searches ChatGPT runs before answering. A `site:` query restricts one of those searches to a single domain, for example `site:hubspot.com pricing`, which tells the retrieval layer to fetch results only from that vendor's site.
+
+**Should I optimize my own site or third-party mentions for AI visibility?**
+Both, for different layers. Third-party mentions build the upstream layer, whether the model considers your brand at all, which our data shows is decided before any search runs. Your own pricing and feature pages decide the downstream layer, whether the current model's `site:` verification finds something to cite.
+
+## How we measured
+
+DecaGEO tracks 10 B2B software categories with a fixed grid of commercial prompts, run weekly against the OpenAI API (US). This analysis uses four runs, weeks of July 11 and July 18, 2026 on `gpt-5.4` and weeks of July 25 and August 1, 2026 on `gpt-5.6-terra`, at 713–714 responses per week. For each response we analyze the search trace (every query the model issued and every page-open it exposed) and the citations in the final answer. Reasoning-effort settings were held constant across all four runs, following the effort-tier warning in Writesonic's methodology. A comparison that changes tier and version together measures the dial, not the model.
+
+Scope and limitations:
+
+- **Surface.** This is the OpenAI API on the Terra tier. Consumer ChatGPT ran GPT-5.5 Instant as its default during this window, and Writesonic's figures come from the Plus UI on the Sol tier. Direction agrees across surfaces. Magnitudes are surface-dependent, so we do not merge external numbers with ours on one scale. Our GPT-5.5 column is external by necessity, since the pipeline went from 5.4 directly to 5.6 when OpenAI retired GPT-5.4 on July 23, 2026.
+- **Prompt universe.** Our grid sits at the specific, commercial end of the prompt spectrum, all unbranded category and comparison questions about B2B software. That position is why 100% of our responses triggered web search, and it is consistent with vendor-page saturation. Writesonic's independent grid found its B2B SaaS cell at 91% first-party on both models it tested, while broad informational prompt sets report the opposite economy, with [third-party sources taking 78–85% of citations](https://www.airops.com/blog/first-party-third-party-citations-llms). The tracking industry calls the failure mode here prompt-set bias. The honest response is declaring your position on the spectrum, which is what this bullet is.
+- **Stability claims are aggregate.** Weekly signatures (site: share, query counts, citation density, category ordering) replicated across weeks within each model. Per-prompt outputs still churn day to day, as the ["Don't Measure Once" study](https://arxiv.org/abs/2604.07585) documents with 34–42% day-over-day source overlap. Both are true at their own resolution.
+- **Single engine.** All of this is OpenAI. ChatGPT's share of generative-AI traffic is [near 53% and falling](https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/) per Similarweb (July 29, 2026), so engine-specific findings should be read as engine-specific.
+- **Heuristics.** Pure-discovery classification is automated, with manual review of all open-form queries. `site:` extraction is string-level, and the route metric matches on registered domains, so subdomain edge cases carry small error, immaterial to a 26-to-88 gap. Page-open counts include only logged tool calls.
+- **What we cannot see.** Traces show the model's search actions, not its reasons. Statements about why GPT-5.6 behaves this way, including our domain-knowledge working model for the GEO category, are interpretations of observed patterns. Observed at a version boundary, not proven as cause.
+
+Prior work this piece builds on: [Seer Interactive's ghost-citations tests](https://www.seerinteractive.com/insights/llm-ghost-citations-why-your-content-is-working-and-your-brand-isnt) (March 2026), [Writesonic's version citation studies](https://writesonic.com/blog/gpt-5-6-sol-citation-study-vs-gpt-5-5) (March–July 2026), [SISTRIX's model-swap panel analysis](https://www.sistrix.com/blog/chatgpt-core-update/) (May 2026), and [David Konitzny's fan-out shift analyses](https://www.linkedin.com/pulse/how-do-llms-secretly-change-tracking-invisible-shifts-david-konitzny-g4pae/) at Peec AI (July 2026). Their questions, asked against our logs.
+
+Related DecaGEO analyses: [Half the New Brands in ChatGPT Vanish Within a Week](https://medium.com/@brown.seo/chatgpt-brand-survival-curve-247b9d53960f) · [Vendors Now Write the Listicles ChatGPT Cites](https://medium.com/@brown.seo/listicles-chatgpt-cites-2a2c0d92c490) · [The Brands ChatGPT Looks Up but Never Names](https://medium.com/@brown.seo/chatgpt-checked-never-named-9b7a48db6ceb)
+
+---
+
+*DecaGEO tracks how AI engines recommend and cite software brands, weekly, category by category. [See the live category boards](https://decageo.ai/).*
