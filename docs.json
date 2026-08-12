@@ -76,8 +76,8 @@
               "best-tools/best-seo-tools",
               "best-tools/best-crm-software",
               "best-tools/best-project-management-tools",
-              "best-tools/new-page-4",
-              "best-tools/new-page-5",
+              "best-tools/best-influencer-marketing-platforms",
+              "best-tools/best-marketing-automation-tools",
               "best-tools/best-email-marketing-tools"
             ]
           }
@@ -183,94 +183,6 @@
         "pages": [
           "deca/whats-new/changelog"
         ]
-      },
-      {
-        "tab": "Archive",
-        "hidden": true,
-        "pages": [
-          {
-            "group": "Get Started",
-            "icon": "add",
-            "hidden": true,
-            "pages": [
-              "geo-playbook/geo-cheat-keys/getting-started/getting-started-with-GEO",
-              "geo-playbook/geo-cheat-keys/getting-started/spoke-strategy-medium-linkedin",
-              "geo-playbook/geo-cheat-keys/getting-started/osmu-workflow-ai-visibility",
-              "geo-playbook/geo-cheat-keys/getting-started/technical-retrofit-ai-parsing",
-              "geo-playbook/geo-cheat-keys/getting-started/summary-box-tactic-ai-optimization",
-              "geo-playbook/geo-cheat-keys/getting-started/header-restructuring-guide-ai-search",
-              "geo-playbook/geo-cheat-keys/getting-started/schema-markup-injection-geo",
-              "geo-playbook/geo-cheat-keys/getting-started/list-table-formatting-ai-geo-deca"
-            ]
-          },
-          {
-            "group": "DECA x ChatGPT Synergy",
-            "hidden": true,
-            "pages": [
-              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/context-engineering-vs-prompt-engineering",
-              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/perfect-ai-content-engine",
-              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/generic-trap-geo-strategy",
-              "geo-playbook/geo-cheat-keys/tools-compare-and-stack/deca-x-chat-gpt-synergy/social-repurposing-engine"
-            ]
-          },
-          {
-            "group": "DECA Sneak Peek",
-            "icon": "eyes",
-            "hidden": true,
-            "pages": [
-              "deca/deca-sneak-peek/maddies-note",
-              {
-                "group": "Building DECA",
-                "pages": []
-              },
-              {
-                "group": "Team Stories",
-                "pages": []
-              },
-              {
-                "group": "Behind the Scenes",
-                "pages": []
-              }
-            ]
-          },
-          {
-            "group": "DECA Handbook",
-            "icon": "notebook",
-            "hidden": true,
-            "pages": [
-              "deca/deca-handbook/overview",
-              {
-                "group": "Getting Started",
-                "hidden": true,
-                "pages": [
-                  "deca/deca-handbook/getting-started/deca-project-setup-guide",
-                  "deca/deca-handbook/getting-started/add-your-brand",
-                  "deca/deca-handbook/getting-started/work-with-deca"
-                ]
-              },
-              {
-                "group": "Core Features",
-                "hidden": true,
-                "pages": []
-              },
-              {
-                "group": "Best Practices",
-                "hidden": true,
-                "pages": []
-              },
-              {
-                "group": "Account & Settings",
-                "hidden": true,
-                "pages": []
-              },
-              {
-                "group": "FAQ",
-                "hidden": true,
-                "pages": []
-              }
-            ]
-          }
-        ]
       }
     ]
   },
@@ -325,6 +237,31 @@
     "drilldown": false
   },
   "redirects": [
+    {
+      "source": "/best-tools/new-page-2",
+      "destination": "/best-tools/best-crm-software",
+      "permanent": true
+    },
+    {
+      "source": "/best-tools/new-page-3",
+      "destination": "/best-tools/best-project-management-tools",
+      "permanent": true
+    },
+    {
+      "source": "/best-tools/new-page-6",
+      "destination": "/best-tools/best-email-marketing-tools",
+      "permanent": true
+    },
+    {
+      "source": "/best-tools/new-page-4",
+      "destination": "/best-tools/best-influencer-marketing-platforms",
+      "permanent": true
+    },
+    {
+      "source": "/best-tools/new-page-5",
+      "destination": "/best-tools/best-marketing-automation-tools",
+      "permanent": true
+    },
     {
       "source": "/geo-playbook/overview",
       "destination": "/what-is-decageo",
