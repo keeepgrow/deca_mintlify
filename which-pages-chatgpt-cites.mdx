@@ -1,0 +1,187 @@
+---
+title: "Which Pages ChatGPT Actually Cites and Why"
+sidebarTitle: "Which Pages ChatGPT Actually Cites"
+description: "Among the vendor pages ChatGPT retrieves, pricing pages get cited 34.5% of the time and blog posts 6.1%. The gap is decided on the search results page, where 99.7% of citations match a result-list URL and only 1.2% come from pages the model opened. What that suggests building, from DecaGEO's retrieval logs."
+keywords: ["which pages does ChatGPT cite", "ChatGPT citations", "AI citations", "how ChatGPT chooses citations", "GEO page structure", "pricing page AI citation", "fan-out queries", "ChatGPT retrieval", "AI visibility", "generative engine optimization", "first-party content AI search", "OAI-SearchBot"]
+"og:title": "Which Pages ChatGPT Actually Cites and Why"
+"og:description": "Pricing pages get cited 34.5% of the time they're retrieved, blog posts 6.1%. The gap is decided on the search results page — 99.7% of citations match a result-list URL, and only 1.2% come from a page the model opened."
+"og:image": "/images/which-pages-chatgpt-cites/cite-rate-by-page-type.png"
+"twitter:card": "summary_large_image"
+"twitter:image": "/images/which-pages-chatgpt-cites/cite-rate-by-page-type.png"
+date: "2026-08-11"
+---
+
+[**Brown Seo**](https://www.linkedin.com/in/brown-seo-78872041b), Founding Engineer (AI & Infrastructure) · Last updated: 08.11.2026
+
+**Among 31,200 vendor pages ChatGPT retrieved in one tracking week, a pricing page had a one-in-three chance of being cited. A blog post had one in sixteen, and a downloadable asset one in eighty. The gap is decided before the model opens anything, on the search results page itself.**
+
+---
+
+Getting retrieved by ChatGPT is not the prize it looks like. [AirOps analyzed 548,534 retrieved pages](https://www.airops.com/report/influence-of-retrieval-fanout-and-google-serps-in-chatgpt) and found that only 15% earned a citation in the final answer. Retrieval is an audition, and most pages fail it.
+
+This piece asks the narrower question that matters once your pages do appear in the model's search results. Which of them get cited, and what separates the winners? When DecaGEO collects AI visibility data, we don't just read the model's final answer — we follow the whole route it takes from a user's question to that answer. That route is what lets us answer this question directly instead of inferring it from outputs.
+
+## What gets cited once ChatGPT finds it
+
+We took every vendor page that appeared in ChatGPT's search results across one full tracking week, classified it by URL path, and checked whether it was cited in the answer:
+
+| Page type | Retrieved | Cited | Citation rate |
+| --- | --: | --: | --: |
+| Pricing | 921 | 318 | **34.5%** |
+| Features / product | 3,194 | 792 | **24.8%** |
+| Capability landing (single slug) | 1,754 | 348 | **19.8%** |
+| Homepage | 877 | 157 | 17.9% |
+| FAQ | 114 | 18 | 15.8% |
+| Docs / help / learn | 11,515 | 1,743 | 15.1% |
+| Integrations | 156 | 14 | 9.0% |
+| News / PR | 547 | 43 | 7.9% |
+| Blog | 2,069 | 126 | **6.1%** |
+| Comparison | 307 | 16 | 5.2% |
+| Legal / downloadable assets | 3,426 | 42 | **1.2%** |
+| Other (no clear page type in the URL) | 6,320 | 357 | 5.6% |
+
+_Data note: DecaGEO retrieval logs, ChatGPT (GPT-5.6), US, week of August 8, 2026. 31,200 retrieved vendor pages (response × unique URL), third-party hosts excluded. Classification rules are in How we measured._
+
+<Frame caption="Citation rate by page type among retrieved vendor pages. DecaGEO retrieval logs, ChatGPT (GPT-5.6), US, week of Aug 8, 2026.">
+  <img
+    src="/images/which-pages-chatgpt-cites/cite-rate-by-page-type.png"
+    alt="Horizontal bar chart of citation rates by page type: pricing 34.5%, features/product 24.8%, single-slug capability landings 19.8%, homepage 17.9%, FAQ 15.8%, docs/help/learn 15.1%, integrations 9.0%, news/PR 7.9%, blog 6.1%, Other 5.6%, comparison 5.2%, and legal/downloadable assets 1.2%."
+    className="mx-auto"
+  />
+</Frame>
+
+One row needs explaining before anything else. Other holds every vendor page whose address names no clear page type (20% of retrievals), and we report it as its own row rather than folding it away. Spot-checking shows most of it is long-tail product and feature pages that live under company-specific names (paths like `/desk`, `/crm`, `/firefly`), and we leave them where they are rather than bending the rules around individual vendors.
+
+Among the named types, the pages that state one purpose lead: pricing (34.5%), feature and product pages (24.8%), and single-slug capability landings (19.8%) — pages like `/keywords-explorer` that carry one capability in their URL. Blog posts (6.1%) and comparison pages (5.2%) sit at the bottom of the content types. The same company's content, retrieved by the same model in the same week, converts to citations at anywhere from one in three to one in eighty depending on what kind of page it is.
+
+Two side findings concern what almost never gets cited. Legal pages and downloadable assets (policy pages, PDFs, uploaded files) were retrieved 3,426 times and cited 42, a 1.2% rate that makes them the closest thing to a zero surface we measured. And pages on app and login subdomains (`get.`, `go.`, `app.`) were retrieved 82 times and cited once. Gated and downloadable surfaces are not citation surfaces.
+
+## Citations are assembled on the search results page
+
+Why would page type matter this much? Because for most citations, the search results page is all the model ever sees.
+
+When we published [our GPT-5.6 vs GPT-5.4 analysis](/gpt-5-6-vs-gpt-5-4-search-citation-behavior), one claim stayed parked. We could show that the model rarely opens the pages it cites, but we could not yet confirm that cited URLs sat in the search results it was shown. Now we can, and the check is done:
+
+- **99.7% of citations match a search-result URL exactly** (4,406 of 4,420 citations, normalized URL match against the same response's result lists).
+- **1.2% of citations match a page the model actually opened** (53 of 4,420). Page-open events ran at 0.08 per response, 57 opens against 714 answers.
+
+The infrastructure explains the numbers. [OpenAI operates separate crawlers for separate jobs](https://platform.openai.com/docs/bots). OAI-SearchBot builds the search index that returns result lists (title, snippet, URL), while ChatGPT-User fetches a page's full content only when the model explicitly opens it. The default material the model works from is the result list. Opening a page is the exception, and our trace data puts a number on how rare it is, at about one open per twelve answers.
+
+For page strategy, this is the part of the mechanics that matters most. Whatever a page shows on the search results surface (its title, its URL, its extractable summary) is what competes for the citation. The body copy itself is, in most responses, never fetched. Page content still matters, but it matters through what the results surface can extract from it — the title and the summary a result shows are built from the page.
+
+## What decides it: the page's purpose has to match the model's question
+
+Citation rates by page type are really a proxy for something more specific. ChatGPT does not search with your buyer's original question. It rewrites that question into multiple narrow queries (the fan-out), and under the current model those queries carry explicit intent, often scoped to a vendor's own domain:
+
+```
+site:semrush.com AI Visibility Toolkit pricing official
+site:otterly.ai AI search monitoring sentiment citations pricing
+site:peec.ai AI visibility tracking citations ChatGPT Perplexity Gemini pricing
+```
+
+Match the citations back to the query that produced them and the intent-to-page mapping is direct:
+
+| Query intent | Cited pages | Pricing | Features | Capability landing | Homepage | Docs / help |
+| --- | --: | --: | --: | --: | --: | --: |
+| Pricing questions | 1,874 | **27%** | 14% | 7% | 3% | 38% |
+| Feature / capability questions | 3,692 | 2% | 22% | 10% | **5%** | **45%** |
+| General | 2,893 | 2% | 19% | 8% | 2% | 54% |
+
+_Data note: DecaGEO retrieval logs, ChatGPT (GPT-5.6), US, week of August 8, 2026. Cited vendor pages grouped by the intent of the query that retrieved them. Intent classified by query keywords (rules in How we measured)._
+
+<Frame caption="Share of each question type's citations by page type. DecaGEO retrieval logs, ChatGPT (GPT-5.6), US, week of Aug 8, 2026.">
+  <img
+    src="/images/which-pages-chatgpt-cites/citations-by-question-intent.png"
+    alt="Grouped bar chart comparing pricing questions and feature/capability questions: pricing pages take 27% of pricing-question citations but 2% of capability-question citations. Capability landings take 7% and 10%. Homepages take 3% and 5%. Docs/help pages take 38% and 45%."
+    className="mx-auto"
+  />
+</Frame>
+
+Three patterns stand out:
+
+1. **Pricing questions cite pricing pages** (27% of their citations, against 2% for every other intent). Docs answer pricing questions too (38%), but the pricing page is the one surface whose citations come almost entirely from that single question.
+2. **Capability questions barely touch the homepage** (5%). When the model asks whether a product does citation tracking or sentiment analysis, the pages that answer are docs and help articles (45%), feature pages (22%), and capability landings (10%). A homepage that tries to say everything answers none of these narrow questions well.
+3. **Docs are the largest single surface.** Across every intent, documentation and help pages take the biggest share of citations, not marketing pages. The page that plainly explains one capability is the page the narrow query lands on.
+
+Two supporting observations point the same way. Cited pages sit higher in the site structure than uncited ones (average URL depth 2.66 against 3.36, n=3,974 vs 27,226), though depth is entangled with page type, so we treat it as directional. And [Ahrefs' study of 1.4 million prompts](https://ahrefs.com/blog/why-chatgpt-cites-pages/) found that cited pages' titles matched the fan-out query more closely than non-cited ones (cosine similarity 0.602 vs 0.484), which is independent evidence that the match happens at the results-surface level, on titles and URLs, not in body text.
+
+The conclusion this points to is that what gets a page cited is not how good it is, but whether its stated purpose matches the question the model actually asked. These are observed patterns; the mechanism behind them is inferred, not proven.
+
+## The pattern holds across categories
+
+A single category could make this look like a niche effect. It is not — the ordering repeats in every category we checked:
+
+| Page type | CRM | SEO | GEO | Email |
+| --- | --: | --: | --: | --: |
+| Pricing | 23.4% | **44.8%** | 37.5% | 38.0% |
+| Features / product | 23.9% | 28.6% | 27.4% | 23.8% |
+| Capability landing | 15.9% | 17.0% | 13.1% | 19.7% |
+| Docs / help / learn | 14.4% | 12.6% | 17.7% | 17.5% |
+| Blog | 7.1% | 6.3% | 8.8% | 2.8% |
+| Legal / assets | 3.9% | 0.7% | 0.0% | 0.4% |
+
+_Data note: citation rate among retrieved vendor pages, week of August 8, 2026. Cells with n under 30 excluded from this view. Full counts are in the source data._
+
+Pricing and feature pages lead everywhere, and blogs and legal pages trail everywhere. The differences between categories are in degree. SEO tools' pricing pages get cited at nearly half their retrievals (44.8%), and GEO, a category of young brands with thin sites, leans harder on homepages simply because many of its vendors have little else to retrieve.
+
+## What the data suggests building
+
+One note before the list. Our data is observational — it shows which pages get cited today, not what happened after a site restructured. So what follows are working hypotheses that the mechanism points to, not guaranteed outcomes:
+
+1. **A page per recurring buying question.** In the data, pricing pages are cited almost exclusively by pricing questions, and capability-level docs catch the capability questions the homepage misses. If the purpose-match reading is right, giving each recurring question its own page, named in the title and the URL, should extend the same effect. The single-slug capability landings in the table (pages like `/keywords-explorer`) already behave this way, converting at 19.8%.
+2. **Shallow, findable URLs.** Cited pages sit near the top of the site structure in our data. The pattern suggests a pricing page at `/pricing` has a better chance than the same information inside `/resources/2026/plans-overview-guide`, though depth is entangled with page type, so we hold this one more loosely.
+3. **Titles and summaries over body copy.** The model rarely opens the page, so the results surface appears to be where the competition happens. A page whose title and extractable summary don't show the answer starts at a disadvantage that the body text can't repair.
+4. **Long blog posts look like the wrong container for commercial answers.** Blogs convert retrievals to citations at 6.1% in our data. They still matter for the upstream layer (whether the model considers your brand at all is [built through breadth of mentions, not retrieval](/gpt-5-6-vs-gpt-5-4-search-citation-behavior)), but the numbers argue against parking pricing, feature, and capability answers there.
+5. **Reachability is the precondition.** None of the above can matter if retrieval systems can't fetch the page. The test is simple — does a `site:yourdomain.com pricing` query return a real, indexed page?
+
+If you want to test these hypotheses against live examples, DecaGEO's [On-Page GEO Patterns](/using/on-page-geo-patterns) shows, for any ranked product, the pages AI cited most that week and audits the on-page patterns they use — and the ones they get cited without.
+
+## Other surfaces show the same shift
+
+Our data comes from the OpenAI API. [David Konitzny's analysis of consumer ChatGPT](https://www.linkedin.com/pulse/chatgpts-new-default-model-gpt-56-more-retrieval-content-konitzny-8htce/) after the GPT-5.6 rollout points the same direction from a different surface: product pages overtook listicles as the most-retrieved page type (16.4% vs 8.2% of retrieved pages), the `site:` operator jumped from 0.3% to 23% of fan-outs, and single-pass retrieval fell from 94% to 43.5% of prompts as the model moved to iterative searching. His numbers and ours come from different surfaces and are not on one scale, but both describe a model that increasingly asks vendors direct questions and cites the pages that answer them.
+
+One caution travels with all of this. The current behavior is a regime, not a law. Search grammar has [reversed between model versions before](/gpt-5-6-vs-gpt-5-4-search-citation-behavior), and the numbers on this page carry their collection window for exactly that reason. The principles (retrieval is not citation, the results surface does the competing, purpose match wins) have held across the versions we have measured. The percentages are the part to expect to move.
+
+## FAQ
+
+### Does ChatGPT read the pages it cites?
+
+Rarely. In DecaGEO's trace data (week of August 8, 2026), 99.7% of citations matched a URL from the search result lists the model was shown, and only 1.2% matched a page the model actually opened. Page opens ran at about one per twelve answers.
+
+### Which pages does ChatGPT cite most often?
+
+Among vendor pages it retrieves, pricing pages get cited most (34.5% of retrievals), followed by feature and product pages (24.8%) and single-slug capability landings (19.8%). At the bottom sit blog posts (6.1%), comparison pages (5.2%), and legal or downloadable-asset pages (1.2%). Documentation and help pages take the largest absolute share of citations because they are retrieved far more often than any other type.
+
+### Why doesn't ChatGPT cite my blog posts?
+
+In our data, blog posts convert retrievals to citations at 6.1%, near the bottom of the content page types. The model's fan-out queries ask narrow commercial questions (pricing, specific capabilities), and a multi-topic blog post rarely presents itself as the direct answer to any single one of them on the search results surface.
+
+### Should I put everything on my homepage?
+
+Our data suggests not. Homepages perform reasonably overall (17.9%) but take only 5% of capability-question citations and 3% of pricing-question citations. Dedicated pages catch the questions the homepage misses (a pricing page for pricing questions, capability-level docs for capability questions).
+
+### What is a fan-out query?
+
+The set of background searches ChatGPT runs before answering. The model rewrites a user's question into multiple narrow queries, often scoped to a specific vendor's domain, for example `site:semrush.com AI Visibility Toolkit pricing official`. Citations map to the intent of these narrow queries, not to the original question.
+
+### Will these numbers change with the next model update?
+
+Probably. Retrieval behavior has changed sharply at model boundaries before, which is why every figure on this page carries its collection window. The structural findings (retrieval is not citation, citations come from the results surface, purpose-matched pages win) have held across the versions we have measured, and we re-verify the numbers as new weeks accumulate.
+
+## How we measured
+
+DecaGEO runs a fixed grid of commercial prompts weekly against the OpenAI API (US) across 10 B2B software categories and analyzes, for each response, the model's searches and the citations in its final answer. This analysis uses the week of August 8, 2026 (collected August 6, model label `gpt-5.6-terra`, 714 responses).
+
+- **Citation matching:** citation URLs normalized and matched against the same response's result-list URLs. Exact-URL match: 4,406/4,420 (99.7%). Registered-domain match: 4,418/4,420 (100.0%). Page-open match: 53/4,420 (1.2%), with opens counted from `open_page` tool calls (57 total). Matching covers all 4,420 citations including third-party hosts, while the page-type analyses cover the 3,974 vendor-page citations.
+- **Page classification:** rule-based on URL host and path, first match wins, generic patterns only. Locale prefixes are stripped first, and each bucket is assigned by its characteristic hosts and paths: `help.` hosts and `/docs`, `/academy` and similar for docs/help/learn, `/pricing` and `/plans` for pricing, `/newsroom` and `/press` for news/PR, `/policies` and `/wp-content` for legal/assets, segments containing "blog" for blog, and `/features`, `/platform` plus segments containing "solutions" or "software" for features/product. A single-slug path matching nothing else counts as a capability landing, and a bare root as homepage. Third-party hosts (review sites, search engines, Wikipedia, Reddit and similar) are excluded, so this analysis covers vendor-owned pages only.
+- **Other bucket:** 20.3% of retrieved vendor pages match no classification rule and are reported as their own row, not dropped. Spot-checking shows most of it is long-tail product and feature pages under vendor-specific names (`/desk`, `/crm`, `/firefly`), which we leave unabsorbed to keep the rules generic and reproducible.
+- **Query intent:** keyword rules on the fan-out query text (pricing, price, plans, or cost → pricing · features, capability, product, API and similar → capability · the rest → general). String-level classification, so intent shares are directional.
+- **Limitations.** This is one week of data. Replication is pending, and this page will be updated as new weeks confirm or revise the numbers. Citation rate is conditional on retrieval: pages that never appear in results are not in the denominator, and getting retrieved at all is a separate, prior gate. That citations appear among search results is partly definitional (the model cites what it consulted); the non-obvious finding is the split between the results surface (99.7%) and opened pages (1.2%). Traces show actions, not reasons — statements about why the model prefers purpose-matched pages are interpretation.
+
+Prior and related work: [AirOps' retrieval-to-citation analysis](https://www.airops.com/report/influence-of-retrieval-fanout-and-google-serps-in-chatgpt) (548,534 pages, 15% cited), [Ahrefs' citation-factor study](https://ahrefs.com/blog/why-chatgpt-cites-pages/) (1.4M prompts, title-to-query similarity), [OpenAI's crawler documentation](https://platform.openai.com/docs/bots) (OAI-SearchBot vs ChatGPT-User), and [David Konitzny's GPT-5.6 retrieval analysis](https://www.linkedin.com/pulse/chatgpts-new-default-model-gpt-56-more-retrieval-content-konitzny-8htce/) (consumer surface).
+
+Related DecaGEO analyses: [GPT-5.6 vs GPT-5.4: How ChatGPT's Search & Citation Behavior Changed](/gpt-5-6-vs-gpt-5-4-search-citation-behavior) · [Vendors Now Write the Listicles ChatGPT Cites](https://medium.com/@brown.seo/listicles-chatgpt-cites-2a2c0d92c490) · [The Brands ChatGPT Looks Up but Never Names](https://medium.com/@brown.seo/chatgpt-checked-never-named-9b7a48db6ceb)
+
+---
+
+*DecaGEO tracks how AI engines recommend and cite software brands, weekly, category by category. [See the live category boards](https://decageo.ai/).*
