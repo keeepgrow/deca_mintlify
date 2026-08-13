@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Bar chart: 44% of U.S. adults use ChatGPT versus 24% for Gemini, about twice as many, per Pew Research Center, June 2026.">
+  <rect width="1400" height="800" fill="#F6F6FB"/>
+
+  <!-- Title + subtitle -->
+  <text x="120" y="88" font-size="40" font-weight="700" fill="#201A3E">Most-used AI chatbot among U.S. adults, 2026</text>
+  <text x="120" y="136" font-size="26" fill="#6E6B7E">ChatGPT reaches about twice as many adults as the next tool.</text>
+
+  <!-- Baseline -->
+  <line x1="120" y1="660" x2="1280" y2="660" stroke="#241B4A" stroke-width="2"/>
+
+  <!-- ChatGPT bar (44%) -->
+  <rect x="360" y="273" width="260" height="387" rx="4" fill="#4B1AFF"/>
+  <text x="490" y="252" font-size="48" font-weight="700" fill="#201A3E" text-anchor="middle">44%</text>
+  <text x="490" y="702" font-size="30" font-weight="600" fill="#201A3E" text-anchor="middle">ChatGPT</text>
+
+  <!-- Gemini bar (24%) -->
+  <rect x="780" y="449" width="260" height="211" rx="4" fill="#A7A3B8"/>
+  <text x="910" y="428" font-size="48" font-weight="700" fill="#201A3E" text-anchor="middle">24%</text>
+  <text x="910" y="702" font-size="30" font-weight="600" fill="#201A3E" text-anchor="middle">Gemini</text>
+
+  <!-- ~2x annotation -->
+  <text x="690" y="372" font-size="42" font-weight="700" fill="#4B1AFF" text-anchor="middle">&#8776; 2&#215;</text>
+
+  <!-- Source footnote -->
+  <text x="120" y="772" font-size="22" fill="#8A86A0">Source: Pew Research Center, June 2026 (U.S. adults, n=5,119).</text>
+</svg>
