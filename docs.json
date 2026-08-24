@@ -52,6 +52,7 @@
             "group": "What's Working Now",
             "icon": "calendar-week",
             "pages": [
+              "is-geo-worth-it",
               "which-ai-to-optimize-for-first",
               "which-pages-chatgpt-cites",
               "gpt-5-6-vs-gpt-5-4-search-citation-behavior",
