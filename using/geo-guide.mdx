@@ -1,0 +1,128 @@
+---
+title: "GEO Guide"
+sidebarTitle: "GEO Guide"
+description: "A five-screen walkthrough that narrows down why AI does not name you — we check your robots.txt and one page for you, and you finish with a report of what to fix."
+keywords: ["geo guide", "why doesn't chatgpt mention my brand", "robots.txt OAI-SearchBot", "ai visibility check", "geo diagnosis", "DecaGEO-GeoGuide bot"]
+authors: ["DecaGEO Team"]
+---
+
+GEO Guide narrows down why AI does not name you, one short question at a time, in about ten minutes. It checks two things on your site for you and builds a report as you go.
+
+You need to be signed in. No Pro plan required.
+
+<Info>
+  Your answers are kept in your browser, not on our servers. **Start over** clears them.
+</Info>
+
+## Where to start it
+
+Open **Dashboard** from the header and look for the **GEO Guide** section at the top of the Overview tab.
+
+- **Before you start** — it lists the five screens you'll walk through, behind a **Start the check** button.
+- **Partway through** — it shows where you stopped, your last question and answer, and **Continue** drops you back in.
+- **After you finish** — it shows how many fixes are still open, with **Review what you found**. Nothing is watched for you, so come back and run it again once you've changed something.
+
+The Guide runs against the category you're viewing on the Dashboard, and **Back to `<category>`** at the top left returns you there.
+
+<Frame caption="The GEO Guide section at the top of the Dashboard's Overview tab, before you start">
+  ![The GEO Guide entry section on the Dashboard, headed "Find out why AI does not name you," with a Start the check button and a list of the five screens it walks through](/images/docs/geo-guide-overview-entry.png)
+</Frame>
+
+## The five screens
+
+A progress trail across the top — **Ask AI · Access · Page · Content · Next steps** — shows where you are. Every screen ends in an answer.
+
+### 1. Ask AI
+
+AI answers buying questions by running a search and picking from what it finds, so the Guide starts by checking whether your name comes up at all.
+
+Write the **product category** you sell into and **who it is for, and what they need** — in the words a buyer would use, not your internal ones. The Guide turns the two into a buying question ("What is the best CRM Software for small business sales teams?"). **Ask ChatGPT** opens it in a temporary chat, so ChatGPT's memory of you doesn't tilt the answer, and copies the question to your clipboard in case it doesn't carry over. **Copy question** copies without opening anything, for when you've already asked.
+
+Read the answer it gives and tell the Guide whether your name came up. Your brand or product name anywhere in the answer counts. AI does not answer the same way every time, so treat this as a first look, not a measurement — **Want a firmer read?** explains how to make it one.
+
+<Tip>
+  Not sure how to describe the buyer? [Segment Position](/using/segment-position-tab) shows the buyer types AI already splits your category into — borrow its words.
+</Tip>
+
+### 2. Access
+
+ChatGPT search uses its own crawler, **OAI-SearchBot**, and draws on the web results **Bingbot** feeds it. This step checks whether your robots.txt lets both of them in.
+
+Give the Guide your site and it reads your robots.txt for you, then reports **Allowed** or **Blocked**. When it reads as blocked, you get the lines that decided it and the lines to add, along with a note on which of your existing rules the fix leaves alone. **Check again** re-reads the file once you've deployed it.
+
+If your site refuses the request or never answers, the Guide says so instead — something in front of your site is turning away automated requests, which is a different problem from a rule in the file.
+
+<Frame caption="A blocked robots.txt, with the lines that decided it and the lines to add">
+  ![The Access step reporting that robots.txt is keeping OAI-SearchBot out, showing the current blocking lines, the lines to add, a link into Category Basics, and a Check again button, with the finding collected under What to fix in the report](/images/docs/geo-guide-robots-blocked.png)
+</Frame>
+
+### 3. Page
+
+Not every page has the same chance of being cited. Pricing and feature pages get cited far more often than blog posts — see [Which Pages ChatGPT Actually Cites](/which-pages-chatgpt-cites) for the rates behind that.
+
+Pick the one page you would send a buyer who asked your question, and the Guide opens it the way a bot would: does it respond, does it allow indexing, and does it name itself as the main address rather than pointing elsewhere. If there's no page to give it, **I do not have a page for this** on the same screen skips the check and goes straight to the fix.
+
+If the bot can't use the page, the Guide lists the symptoms to choose from — a `noindex` tag, a canonical pointing at another address, an address with nothing at it, an error, a timeout — with whatever it found already surfaced at the top. The list also covers the case where nothing on your site is built for this question: *we only have a homepage*, *we answer it in a blog post*, *we have not written about it yet*.
+
+### 4. Content
+
+Once a bot can read the page, the question is whether the page competes for your buying question. The Guide reads back what a bot sees — the **date**, the **title**, the **H1**, and the **headings** — under **What the bot reads**, with your own question kept separate below it, so you can judge whether the words match. Bots match words, and those lines are where the match has to show up.
+
+**Open in ChatGPT** hands the comparison to ChatGPT with the prompt pre-filled, and **Copy prompt** puts it on your clipboard instead. Then answer whether it all matches or some words are missing.
+
+<Frame caption="What the bot reads, kept separate from the question you gave the Guide">
+  ![The Content step showing the date, title, H1, and headings read from the page under "What the bot reads," with the user's own buying question below it under "What you told us"](/images/docs/geo-guide-content-check.png)
+</Frame>
+
+### 5. Next steps
+
+Once your own site checks out, what's left is being chosen — whether AI sees your category the way you do, and whether it hears your name outside your site. The last screen points you at what answers it: a tab on your product page, or a tab on this Dashboard.
+
+| Where do you want to look? | What it is | The Guide opens |
+| --- | --- | --- |
+| Does AI see your category the way you do? | Segment Position, a tab on your product page | [How to use it](/using/segment-position-tab) |
+| What are the cited pages doing on the page? | On-Page GEO Patterns, a tab on your product page | [How to use it](/using/on-page-geo-patterns) |
+| What does almost every leader already have? | Category Basics on the [Dashboard](/using/dashboard) | The tab itself |
+| What moved this week, and why? | Weekly Playbook on the [Dashboard](/using/dashboard) | The tab itself |
+| Where else does AI hear your name? | Weekly Breakouts on the [Dashboard](/using/dashboard) | The tab itself |
+
+The Guide doesn't know your brand's page on DecaGEO, so for the two product-page tabs it opens the documentation for that tab rather than the tab itself.
+
+*Where else does AI hear your name?* also carries a ChatGPT prompt the other rows don't — it asks which pages already mention your brand and how each one describes you, so you see what exists before paying anyone for more.
+
+Prescriptions inside the Guide link into the Dashboard the same way. Arriving from one, the Dashboard opens that item already expanded and highlighted, with a banner at the top naming what sent you there and a link back to the Guide.
+
+## The report
+
+**GEO diagnosis**, on the right, fills in as you answer. Each answer becomes a numbered line, and anything worth fixing is collected under **What to fix**, with what to change and why. The links into the Dashboard sit on the prescription screens themselves, not in the report.
+
+**Copy** turns the whole report into Markdown, so it pastes into Notion, Slack, or a ticket for whoever owns the change.
+
+On a phone the report moves to a collapsed row above the questions — tap it to open.
+
+<Frame caption="The last screen, with the report filled in from every answer">
+  ![The Next steps screen listing where to look next, alongside the GEO diagnosis report with nine numbered lines built from the answers given so far](/images/docs/geo-guide-next-steps-report.png)
+</Frame>
+
+## About our checker
+
+Two steps read your site directly. Both run only when someone presses the button in the Guide, against the address they entered.
+
+| | |
+| --- | --- |
+| **User-agent** | `DecaGEO-GeoGuide/1.0 (+https://decageo.ai/docs/using/geo-guide)` |
+| **What it requests** | Your `/robots.txt` in the Access step, and the single page URL you entered in the Page step. It follows up to three redirects, and does not crawl onward from either. |
+| **When** | Only when a signed-in user runs that step for your site. There is no schedule and no background crawl. |
+| **What we keep** | Nothing. The result is written into the report in that browser; we do not store a record of the check. |
+
+This user-agent appearing in your server logs means someone ran the Guide against that address.
+
+It is not a crawler, so it does not read your robots.txt. It fetches the one address a person typed into the Guide, once, the way their browser would — there is no schedule to opt out of. If you want to refuse it anyway, block the user-agent at your server or CDN.
+
+Whether ChatGPT can reach your site is a separate question, decided by the `OAI-SearchBot` and `Bingbot` rules the Access step reads.
+
+## Where your answers live
+
+Everything you enter stays in your browser's local storage: the category, the buyer, the site and page you asked us to check, and every answer. It never becomes a record on our side.
+
+Two things follow from that. Your progress doesn't carry over to another browser or device, and it can disappear on its own if the browser clears its storage. **Start over** clears it and restarts the Guide from the first question.
