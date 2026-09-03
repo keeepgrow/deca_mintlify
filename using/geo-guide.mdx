@@ -21,7 +21,7 @@ Open **Dashboard** from the header and look for the **GEO Guide** section at the
 
 - **Before you start** — it lists the five screens you'll walk through, behind a **Start the check** button.
 - **Partway through** — it shows where you stopped, your last question and answer, and **Continue** drops you back in.
-- **After you finish** — it shows how many fixes are still open, with **Review what you found**. Nothing is watched for you, so come back and run it again once you've changed something.
+- **After you finish** — with fixes still open, it counts them and offers **Review what you found**, plus a reminder that nothing is watched for you, so come back and run it again once you've changed something. With nothing to fix, it says so and offers **See what to do next** instead.
 
 The Guide runs against the category you're viewing on the Dashboard, and **Back to `<category>`** at the top left returns you there.
 
@@ -41,6 +41,8 @@ Write the **product category** you sell into and **who it is for, and what they 
 
 Read the answer it gives and tell the Guide whether your name came up. Your brand or product name anywhere in the answer counts. AI does not answer the same way every time, so treat this as a first look, not a measurement — **Want a firmer read?** explains how to make it one.
 
+Answer **Yes** and the Guide skips the site checks and goes straight to the last screen. If AI already names you, whether it can reach your site is no longer the question.
+
 <Tip>
   Not sure how to describe the buyer? [Segment Position](/using/segment-position-tab) shows the buyer types AI already splits your category into — borrow its words.
 </Tip>
@@ -49,7 +51,7 @@ Read the answer it gives and tell the Guide whether your name came up. Your bran
 
 ChatGPT search uses its own crawler, **OAI-SearchBot**, and draws on the web results **Bingbot** feeds it. This step checks whether your robots.txt lets both of them in.
 
-Give the Guide your site and it reads your robots.txt for you, then reports **Allowed** or **Blocked**. When it reads as blocked, you get the lines that decided it and the lines to add, along with a note on which of your existing rules the fix leaves alone. **Check again** re-reads the file once you've deployed it.
+Give the Guide your site and it reads your robots.txt for you, then reports **Allowed** or **Blocked**. When it reads as blocked, you get the lines that decided it and the lines to add, along with a note on which of your existing rules the fix leaves alone. **Check again** re-reads the file once you've deployed it, and **Change the address** takes you back to the address box if you typed the wrong site.
 
 If your site refuses the request or never answers, the Guide says so instead — something in front of your site is turning away automated requests, which is a different problem from a rule in the file.
 
@@ -77,7 +79,7 @@ Once a bot can read the page, the question is whether the page competes for your
 
 ### 5. Next steps
 
-Once your own site checks out, what's left is being chosen — whether AI sees your category the way you do, and whether it hears your name outside your site. The last screen points you at what answers it: a tab on your product page, or a tab on this Dashboard.
+Whether you cleared the site checks or skipped them because AI already names you, what's left is being chosen — whether AI sees your category the way you do, and whether it hears your name outside your site. The last screen points you at what answers it: a tab on your product page, or a tab on this Dashboard.
 
 | Where do you want to look? | What it is | The Guide opens |
 | --- | --- | --- |
@@ -89,7 +91,7 @@ Once your own site checks out, what's left is being chosen — whether AI sees y
 
 The Guide doesn't know your brand's page on DecaGEO, so for the two product-page tabs it opens the documentation for that tab rather than the tab itself.
 
-*Where else does AI hear your name?* also carries a ChatGPT prompt the other rows don't — it asks which pages already mention your brand and how each one describes you, so you see what exists before paying anyone for more.
+*Where else does AI hear your name?* also carries a ChatGPT prompt the other rows don't — it asks which pages already mention your brand and how each one describes you, so you see what exists before paying anyone for more. The Guide never learned your brand name, since the first screen asks only for your category and your buyer, so it asks for it here and keeps both buttons disabled until you fill it in. The name goes into that one prompt and nowhere else.
 
 Prescriptions inside the Guide link into the Dashboard the same way. Arriving from one, the Dashboard opens that item already expanded and highlighted, with a banner at the top naming what sent you there and a link back to the Guide.
 
