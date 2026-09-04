@@ -54,6 +54,7 @@
             "group": "What's Working Now",
             "icon": "calendar-week",
             "pages": [
+              "what-decides-who-ai-recommends",
               "is-geo-worth-it",
               "which-ai-to-optimize-for-first",
               "which-pages-chatgpt-cites",

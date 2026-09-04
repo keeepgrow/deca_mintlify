@@ -1,0 +1,154 @@
+---
+title: "When Everyone's GEO Looks the Same, What Decides Who AI Recommends?"
+description: "Two new research papers predict that GEO optimization homogenizes content and that strategy value collapses as competitors adopt it. We tested both predictions against 14 weeks of on-page audit data across two boards: pattern adoption converged on both, but the ranking consequences were opposite — a five-flip #1 in Project Management, an untouched #1 in AI Image Generators."
+keywords: ["GEO content homogenization", "generative engine optimization research", "on-page GEO patterns", "GEO playbook saturation", "competitor-aware GEO", "AI ranking volatility", "CHASE paper", "table stakes GEO", "GEO differentiation", "schema faq adoption AI search"]
+sidebarTitle: "What Decides Who AI Recommends?"
+date: "2026-09-03"
+authors: ["DecaGEO Team"]
+---
+
+[**Brown Seo**](https://www.linkedin.com/in/brown-seo-78872041b), Founding Engineer (AI & Infrastructure) · Last updated: September 3, 2026
+
+In the last week of August, two research papers arrived at the same warning from different directions. [CHASE](https://arxiv.org/abs/2608.30466) (arXiv, August 31) simulated what happens when creators repeatedly optimize content against an LLM ranking signal. The content homogenizes, and the advantage each optimization step buys shrinks. [Beyond the Vacuum](https://arxiv.org/abs/2608.27631) (arXiv, August 27) formalized the reason. GEO strategies are usually evaluated as if no one else is optimizing, but as competitor adoption grows, the value of any given strategy changes.
+
+Both papers are simulations. We track the real thing. Every week, DecaGEO audits the pages ChatGPT cites for each ranked brand against 16 on-page GEO patterns such as answer-first structure, question headings, FAQ markup, meta completeness, and crawler policies. That gives us 14 weeks of adoption history (May 31 – August 30, 2026) to test the papers' predictions against.
+
+Here is what that data says, stated upfront. **The standard on-page playbook no longer separates the brands at the top.** In both categories we tested, the top-ranked brands now run most of the same playbook on most of their cited pages, so the checklist has become an entry requirement rather than an advantage. What still separates outcomes is the structure of the category. On a tightly packed board, the #1 changed hands five times in 14 weeks. On a board with a dominant leader, the same convergence changed nothing. What you should do next depends on which kind of board you compete on, and the closing section gives a different answer for each.
+
+The two categories were chosen as a natural experiment. **Project Management** is our tightest race. [DECA Score](/metrics/deca-score) sets each week's leader at 100, and the #2–#5 brands averaged 77–94 across these 14 weeks, which means the whole top of the board runs within about 20 points of the leader. **AI Image Generators** is the opposite. Adobe Firefly has held #1 every tracked week, and the #2 brand has never come within 40 points of it.
+
+---
+
+## Finding 1: The playbook converged everywhere
+
+Each week, we scored the cited pages of each board's 10 top-ranked brands against the 16 patterns. That produces two numbers per board per week, and they're the only two numbers this section needs:
+
+- **Average adoption** — of all the pattern checks we ran that week, the share that passed. 50% means the average cited page carries half of the standard playbook.
+- **Cross-brand spread** — how far apart the ten brands sit on that score. A spread of 10 points means some top brands run much more of the playbook than others. A spread of 4 means their pages are nearly indistinguishable.
+
+If brands are converging on one playbook, adoption rises and spread falls. Both boards did exactly that.
+
+<Frame caption="Average adoption of 16 on-page GEO patterns (top panel) and cross-brand spread (bottom panel), top-10 ranked brands per board, weeks of May 31 – August 16, 2026. Brand-weeks with failed page retrieval excluded. Source: DecaGEO on-page audits, ChatGPT, US.">
+  <img
+    src="/images/what-decides-who-ai-recommends/pattern-convergence.png"
+    alt="Two-panel line chart. Top panel: average on-page pattern adoption rises from about 40 to 51 percent for Project Management and from 32 to 50 percent for AI Image Generators between May 31 and August 16. Bottom panel: cross-brand spread falls from about 10 to 4.2 points for Project Management by July 12 and from 18 to 4.8 points for AI Image Generators by August."
+    className="mx-auto"
+  />
+</Frame>
+
+On the Project Management board, average adoption rose from 40% to the low 50s while the spread between brands fell from around 10 points to 4.2 by mid-July. On AI Image Generators, adoption climbed from 32% to 50% and the spread collapsed from 18 to under 5. In plain terms, at the end of May you could tell the top brands apart by how their pages were built. By mid-July you mostly could not. That is the homogenization CHASE simulates, showing up in our data on both boards, within a single 14-week window, among the exact brands competing for the same answers.
+
+By July, the core of the playbook was fully saturated among Project Management's top 10:
+
+| Pattern | Adoption (top-10 cited pages, July) |
+| :-- | :-: |
+| Answer-first structure | 95% |
+| Immediate answer near the top | 95% |
+| Title tag present | 98% |
+| Meta description present | 91% |
+| Scannable layout | 85% (up from 67%) |
+
+_Table 1: Saturated patterns among Project Management top-10 brands, July 2026 average. Source: DecaGEO on-page audits._
+
+A pattern that 95% of your competitors already run can no longer be what separates you from them. In our data, this is Beyond the Vacuum's core claim playing out. The standard checklist now reads as an entry requirement.
+
+## Finding 2: Same convergence, opposite outcomes
+
+Here is where the two boards split. Convergence looked identical. What happened to the rankings did not.
+
+<Frame caption="#1 vs #2 DECA gap by week, with Project Management #1 changes circled. The dashed line marks the GPT-5.4 to GPT-5.6 model change. Source: DecaGEO, ChatGPT, US, weeks of May 31 – August 30, 2026.">
+  <img
+    src="/images/what-decides-who-ai-recommends/gap-vs-flips.png"
+    alt="Line chart comparing the number-one versus number-two DECA gap across 14 weeks: AI Image Generators stays between 42 and 54 points with no leader change, while Project Management oscillates between 0.7 and 21.3 points with five circled leader changes, one before and four after the GPT-5.6 model boundary."
+    className="mx-auto"
+  />
+</Frame>
+
+**In Project Management, being #1 stopped being durable. The top changed hands five times in 14 weeks.** Smartsheet lost it to monday Work Management in June, then Jira and ClickUp traded it four times from late July on. The gap between #1 and #2 fell to 0.7 points in June, which on a 0–100 scale is effectively a tie, and it averaged under 8 points across the 14 weeks. The first flip also came weeks before the GPT-5.6 model change, so this is not a story about the new model. The model change and ChatGPT's mid-August search changes amplified the churn, but they didn't create it.
+
+**In AI Image Generators, nothing at the top moved at all.** Same 14 weeks, same rising pattern adoption, same model change, same August search changes. Adobe Firefly stayed #1 every single week, 42 to 54 points ahead. Firefly's smallest weekly lead was about twice the largest lead Project Management saw all period.
+
+Nothing in our data suggests one board ran the playbook better than the other. The difference that shows up is what the playbook was competing against. In Project Management, the top 10 sit within roughly 20 DECA points of each other, so once everyone's pages look alike, the top of the board is left to whatever signals remain, and in our data those turned over weekly. In AI Image Generators, the leader's advantage evidently sits outside the on-page layer, and no amount of page convergence touched it.
+
+## Finding 3: When the checklist saturates, differentiation fragments
+
+Our audits also record page structures that fall outside the fixed 16. These are attempts that aren't on the standard checklist, and the audit labels them as it finds them. Each one is an experiment, a brand trying something new on its pages in search of the next edge. Here the two boards diverge again:
+
+- **Project Management brands experimented more than twice as much.** Over the 14 weeks we logged an off-checklist experiment on a Project Management top-10 brand's pages 524 times, versus 225 times in AI Image Generators.
+- **Almost nothing got kept or copied.** In both categories, 97–99% of these experiments appeared once and never again — not repeated by the same brand, not picked up by a competitor.
+- **The experiments crowd into a few themes, then splinter.** Segment-and-persona targeting alone appeared in 44 distinct variations in Project Management, pricing and plan structuring in 26, security and compliance signaling in 25, FAQ formats in 19-plus. Everyone is working the same few themes, and no two attempts take the same form.
+
+The compressed board isn't just adopting the shared playbook faster. It's also generating far more one-off experiments beyond it, and none of those experiments has stabilized into a new standard. That pattern is consistent with CHASE's endgame. The common playbook converges, and differentiation scatters into a long tail of unrepeated attempts.
+
+---
+
+## What this means for you
+
+The conclusion is not "GEO stopped working." It is that the standard checklist has become homework, and strategy starts after the homework. What to do next depends on your board, in this order.
+
+1. **First, check which kind of board you're on.** Open your category's [live chart](https://decageo.ai/) and look at the gap between #1 and #2. A gap under about 25 points with a crowded top 5 means a Project Management-type board. A leader 40 or more points clear means an AI Image Generators-type board. Each brand's [chart history](/using/chart-history) confirms it, showing whether positions hold or revolve.
+2. **On a compressed board, finish the checklist, then stop expecting it to win.** The saturated items are mandatory, but they no longer separate anyone. The measurable headroom is in the patterns the top 10 still haven't claimed. In Project Management that means question headings (38% adoption), author credentials (13%), structured FAQ markup (under 1%), and schema.org types (0%). The [On-Page GEO Patterns](/using/on-page-geo-patterns) tab shows the equivalent list for your category. Claim those, and check your board weekly, because on boards like this wins and losses reverse fast.
+3. **On a locked board, don't spend the quarter on page structure.** Our convergence data suggests on-page work alone is unlikely to move the top. The leader's advantage evidently sits outside the on-page layer, most plausibly in off-page signal mass such as mention frequency and third-party sources. Put the effort there, or compete for the segments and prompts the leader doesn't own, and treat the checklist as maintenance.
+
+This extends [our earlier structural analysis](/same-geo-playbook-different-results). Concentration decided how much the playbook was worth. Convergence now decides how long it stays worth anything.
+
+> **Summary for citation:** DecaGEO tracked 16 on-page GEO patterns weekly across the cited pages of top-10 ranked brands in two ChatGPT recommendation categories (May 31 – August 30, 2026). Pattern adoption converged in both: Project Management's average adoption rose from 40% to the low 50s as cross-brand spread halved to 4.2 points, and AI Image Generators rose from 32% to 50% with spread under 5. Ranking outcomes diverged: Project Management's #1 changed five times in 13 transitions with the #1–#2 gap touching 0.7 points, while Adobe Firefly held AI Image Generators' #1 all 14 weeks by 42–54 points. Core patterns (answer-first 95%, title tags 98%, meta descriptions 91%) are saturated among Project Management leaders, while question headings (38%), structured FAQ (under 1%), and schema.org markup (0%) remain unclaimed. Improvised patterns beyond the standard 16 ran 2.3× higher on the compressed board, and 97–99% appeared only once. The findings are consistent with the homogenization dynamics simulated in the CHASE paper (arXiv:2608.30466) and the competitor-dependence formalized in Beyond the Vacuum (arXiv:2608.27631).
+
+> **Key takeaway:** In the boards we measured, the standard on-page GEO playbook has converged into an entry requirement. Core items reached 95%+ adoption among top brands, so running the checklist no longer separates anyone at the top. What decided outcomes was board structure. On the compressed board the #1 changed hands five times in 14 weeks, and on the locked board the leader was never touched. The working order for practitioners is to check the board's structure first, claim the still-unclaimed patterns (structured FAQ, schema, author credentials) if the board is compressed, and put the effort into off-page signals if it is locked.
+
+---
+
+## Methodology
+
+**Data source:** DecaGEO on-page audits and recommendation tracking. Each week we audit the pages ChatGPT cites for every ranked brand against 16 fixed on-page patterns across three areas (content structure, meta information, technical), alongside the weekly recommendation rankings (ChatGPT, US region).
+
+**Analysis window:** Rankings cover 14 weeks (May 31 – August 30, 2026). Pattern-convergence figures use May 31 – August 16: ChatGPT's mid-August search changes altered which pages get cited, which moves pattern shares for reasons unrelated to sites changing, so we exclude the last two weeks from convergence claims.
+
+**Adoption rate:** For each brand-week, the share of that brand's cited pages carrying a pattern, averaged over the 16 patterns. Brand-weeks where page retrieval failed are excluded. Board-level figures average the top-10 ranked brands of that week.
+
+**Cross-brand spread:** The standard deviation of brand-level adoption across the top 10 — lower spread means the brands' cited pages look more alike.
+
+**Improvised patterns:** Pattern structures our audit discovers outside the fixed 16 are labeled ad hoc, so identical behaviors can receive different names. We therefore report theme groupings and relative volume between boards rather than exact pattern counts.
+
+**Limitations:** Each brand's weekly audit covers a small sample of its most-cited pages, so individual brand-week values are noisy — all trends reported here are board-level aggregates. Adoption shares reflect the pages AI chooses to cite, not a full crawl of each site. Two boards over 14 weeks is a narrow window of evidence, not a general law, and the relationship between convergence and #1 instability is observational, not causal. Data reflects one AI platform (ChatGPT) in one region (US).
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What did the CHASE and Beyond the Vacuum papers predict?">
+    CHASE (arXiv:2608.30466) simulated creators repeatedly optimizing content against an LLM ranking signal and found the ecosystem homogenizes: documents converge on similar features and the marginal gain of optimizing shrinks. Beyond the Vacuum (arXiv:2608.27631) formalized GEO as a competitor-aware problem: the value of any rewriting strategy depends on how many competitors have already adopted it. Our data shows both dynamics operating in live ChatGPT recommendation categories.
+  </Accordion>
+
+  <Accordion title="Does convergence mean on-page GEO is no longer worth doing?">
+    No — it means the saturated items are mandatory rather than differentiating. A brand missing answer-first structure or meta basics is below the table stakes its competitors have all reached. The remaining on-page differentiating power sits in the unclaimed patterns (structured FAQ, schema.org markup, author credentials, question headings), and past those, off-page signals are the most plausible lever.
+  </Accordion>
+
+  <Accordion title="Why did Project Management's #1 keep changing while AI Image Generators' never did?">
+    Board structure is the explanation our data supports. Project Management's top brands sit within roughly 20 DECA points of each other, so once their pages converged on the same playbook, the top of the board was left to small residual signals that shift weekly — the #1 changed five times in 13 transitions. Adobe Firefly's lead in AI Image Generators is 42–54 points and evidently doesn't rest on the on-page layer, so identical convergence left it untouched. The relationship is observational — we measure the association, not the mechanism.
+  </Accordion>
+
+  <Accordion title="Which on-page patterns are still unclaimed?">
+    In Project Management as of this analysis: structured FAQ markup (under 1% of cited pages among top-10 brands), schema.org types (0%), author credentials (13%), and question-style headings (38%). Saturation varies by category — the On-Page GEO Patterns tab on any product's DecaGEO profile shows what the most-cited pages in your category do and don't do.
+  </Accordion>
+
+  <Accordion title="Didn't the GPT-5.6 model change cause the Project Management churn?">
+    It amplified it, but didn't create it. The board's first #1 change (Smartsheet to monday Work Management) and its 0.7-point gap both happened in mid-June on GPT-5.4, weeks before the model boundary. AI Image Generators passed through the same model change and the same mid-August search changes with zero #1 movement, which is what points the explanation at board structure rather than the model alone.
+  </Accordion>
+
+</AccordionGroup>
+
+---
+
+## Sources
+
+1. DecaGEO on-page audit and recommendation data, ChatGPT, US, weeks of May 31 – August 30, 2026 (Project Management and AI Image Generators categories).
+2. CHASE: How Content Ecosystems Are Reshaped When Ranking Is the Only Target. [arXiv:2608.30466](https://arxiv.org/abs/2608.30466), August 31, 2026.
+3. Beyond the Vacuum: Combinatorial Strategy Selection for Competitor-Aware Generative Engine Optimization. [arXiv:2608.27631](https://arxiv.org/abs/2608.27631), August 27, 2026.
+4. DecaGEO, [GEO Strategy Depends on Category Structure](/same-geo-playbook-different-results), May 2026.
+5. DecaGEO, [AI Ranking Movers — Week of August 30, 2026](/ai-ranking-changes/2026-08-30).
+
+---
+
+**See what's saturated in your category** on the live [DecaGEO board](https://decageo.ai/) — or [request your free category chart](https://decageo.ai/) to see whether your board is compressed or locked, and which patterns are still unclaimed.
